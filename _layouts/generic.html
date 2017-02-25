@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		{% include head.html %}
+		{% seo %}
+	</head>
+	<body id="top" class="is-loading">
+		<div id="page-wrapper">
+		<!-- Header -->
+		{% include header.html %}	
+		<!-- Nav -->
+		{% include nav.html %}		
+		<!-- Banner -->
+		{% include banner-generic.html %}	
+		<!-- Main -->
+			<div id="not-main">
+				<article>
+					<section class="container 75%">
+						{{ content }}
+					</section>
+					{% include pre-footer.html %}
+				</article>
+			</div>
+		<!-- CTA -->
+		{% include cta.html %}	
+		<!-- Footer -->
+		{% include footer.html %}	
+		<!-- Scripts -->
+		{% include scripts.html %}	
+		</div>
+	</body>
+</html>

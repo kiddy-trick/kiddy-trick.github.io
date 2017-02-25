@@ -1,0 +1,116 @@
+---
+title: Контакты - COPPERI
+description: Где купить медные радиаторы отопления COPPERI? Контакты и схема проезда.
+layout: generic-100
+permalink: /contact
+redirect_from:
+- /contacts.html
+
+page-title: Контакты
+page-subtitle: Звоните и пишите нам по любым вопросам.
+
+banner-color: "#F4EAF9"
+---
+<div class="align-center">
+	<div class="container 75%">
+		<div itemscope itemtype="http://schema.org/GeneralContractor">
+			<span class="hide" itemprop="name">COPPERI</span>
+			<meta itemprop="image" content="http://copperi.ru/images/banner-uniq-600.jpg">
+			<meta itemprop="priceRange" content="$$$">
+			<ul class="alt">
+				<li><i class="fa fa-phone">&nbsp;</i><a href="tel:+7(499)390-72-14"><span itemprop="telephone">+7&nbsp;(499)&nbsp;390-72-14</span></a></li>
+				<li><i class="fa fa-envelope-o">&nbsp;</i><a href="mailto:info@copperi.ru"><span itemprop="email">info@copperi.ru</span></a></li>
+				<li><div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><i class="fa fa-map-marker">&nbsp;</i><span itemprop="postalCode">142181</span> г. <span itemprop="addressLocality">Климовск</span>, <span itemprop="streetAddress">ул. Заводская, д. 2</span></div></li>
+				<li><i class="fa fa-clock-o">&nbsp;</i><data itemprop="openingHours" value="Mo-Fri 10:00−20:00"> Пн-Пт, 10:00-20:00.</data></li>
+			</ul>
+		</div>
+	</div>
+	<div id="map"></div>
+	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDhVVXo6YEQbJaryZPqmx8g_SqMln8x8jY&extension=.js'></script>
+	<script> 
+	<!-- function initMap() { -->
+			google.maps.event.addDomListener(window, 'load', init);
+			var map;
+			function init() {
+				var mapOptions = {
+					center: new google.maps.LatLng(55.505749,37.512866),
+					zoom: 10,
+					zoomControl: true,
+					zoomControlOptions: {
+						style: google.maps.ZoomControlStyle.LARGE,
+					},
+					disableDoubleClickZoom: false,
+					mapTypeControl: false,
+					mapTypeControlOptions: {
+						style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+					},
+					scaleControl: false,
+					scrollwheel: false,
+					panControl: false,
+					streetViewControl: false,
+					draggable : !('ontouchend' in document),
+					overviewMapControl: false,
+					overviewMapControlOptions: {
+						opened: false,
+					},
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}],
+				}
+				var mapElement = document.getElementById('map');
+				var map = new google.maps.Map(mapElement, mapOptions);
+				var locations = [
+		['COPPERI', 'г. Климовск, ул. Заводская, д. 2', '+7(499)390-72-14', 'info@copperi.ru', 'copperi.ru', 55.379254, 37.548867, '/images/solid-pin-black.png']
+				];
+				for (i = 0; i < locations.length; i++) {
+					if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+					if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+					if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+				   if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+				   if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+					marker = new google.maps.Marker({
+						icon: markericon,
+						position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+						map: map,
+						title: locations[i][0],
+						desc: description,
+						tel: telephone,
+						email: email,
+						web: web
+					});
+		if (web.substring(0, 7) != "http://") {
+		link = "http://" + web;
+		} else {
+		link = web;
+		}
+					bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
+			 }
+		 function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
+			  var infoWindowVisible = (function () {
+					  var currentlyVisible = false;
+					  return function (visible) {
+						  if (visible !== undefined) {
+							  currentlyVisible = visible;
+						  }
+						  return currentlyVisible;
+					   };
+				   }());
+				   iw = new google.maps.InfoWindow();
+				   google.maps.event.addListener(marker, 'click', function() {
+					   if (infoWindowVisible()) {
+						   iw.close();
+						   infoWindowVisible(false);
+					   } else {
+						   var html= "<div style='color:#100e11;background-color:#fff;padding:5px;width:250px;'><h4>"+title+"</h4><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><a href='"+link+"'' >"+web+"<a></div>";
+						   iw = new google.maps.InfoWindow({content:html});
+						   iw.open(map,marker);
+						   infoWindowVisible(true);
+					   }
+				});
+				google.maps.event.addListener(iw, 'closeclick', function () {
+					infoWindowVisible(false);
+				});
+		 }
+		}
+		<!-- } -->
+		</script>
+</div>

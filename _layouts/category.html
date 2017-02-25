@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		{% include head.html %}
+		{% seo %}
+	</head>
+	<body id="top" class="index is-loading">
+		<div id="page-wrapper">
+		<!-- Header -->
+		{% include header.html %}	
+		<!-- Nav -->
+		{% include nav.html %}		
+		<!-- Banner -->
+		{% include banner-small.html %}	
+		<!-- Main -->
+			<div id="not-main">
+				<article  class="special">
+					<section id="frontpage-grid">
+						<div class="row 0%">
+						{% assign sorted_cat = site.catalog | sort: 'weight' %}
+						{% for product in sorted_cat %}
+							{% if product.layout != "category" %}
+								{% if product.url contains page.url %}
+									{% assign url_list = product.url | split: '/' %}
+									{% assign prod_name = url_list | last %}
+									<div class="3u 4u(large) 6u(small)">
+										<a href="{{product.url}}" class="copperi-link">
+											<div class="inner-wrapper product">	
+												<img class="image fit pop" src="/images/catalog/{{prod_name}}-small.jpg" alt="{{product.product-title}}-{{prod_name}}">
+												<h3>{{product.product-name}}</h3>
+												{% assign first-model = site.data[product.product-type] | first %}
+												<p>{{ first-model.price }}</p>
+											</div>	
+										</a>
+									</div>
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+						</div>
+					</section>
+					{{ content }}
+					{% include pre-footer.html %}
+				</article>
+			</div>
+		<!-- CTA -->
+		{% include cta.html %}	
+		<!-- Footer -->
+		{% include footer.html %}	
+		<!-- Scripts -->
+		{% include scripts.html %}	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+gems:
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+collections:
+  catalog:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: /images/banner-antiq.jpg
