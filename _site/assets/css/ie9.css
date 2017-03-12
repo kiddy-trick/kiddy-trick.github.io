@@ -1,0 +1,11 @@
+#frontpage-grid .product img{
+	padding: 0.25em;
+	-moz-animation-fill-mode: none;
+	-webkit-animation: none;
+	animation: none;
+	top: 0;
+}
+
+.copperi-link {
+	display: block;
+}

@@ -14,105 +14,74 @@
 		<!-- Main -->
 			<div id="not-main">
 				<article  class="special">
-					<section id="product-hero">
-						<div id="banner-wrapper" style="color:#ccc">
+					<section id="product-hero" class="product-section">
+						<div class="row">
 							{% assign img_array = "" | split:"," %}
 							{% for file in site.static_files %}
 								{% if file.path contains page.url %}
 									{% assign img_array = img_array | push: file.path %}
 								{% endif %}
 							{% endfor %}
-							{% if img_array.size > 0 %}
 							
-							<div class="slick-product">
-								{% for img in img_array %}
-								<div>
-									<div class="banner b-product">
-										<img src="{{ img }}" alt="{{page.product-title}}-{{forloop.index}}">
-									</div>
+							<div class="7u 12u(medium)">
+								<div class="image fit">
+									<img src="{{img_array[0]}}" alt='{{page.product-name}}'/>
 								</div>
-								{% endfor %}
 							</div>
-							{% endif %}
+							<div class="5u 12u(medium)">
+								<div class="hero-block">
+									{% assign url_list = page.url | split: '/' %}
+									{% assign prod_name = url_list | last %}
+									{% assign back_url = page.url | remove: prod_name %}
+									
+									{% for product in site.catalog %}
+										{% if product.url == back_url %}
+											{% assign cat_name = product.page-title %}
+										{% endif %}
+									{% endfor %}
+									<div class="view-more">
+										<a href="{{back_url}}">{{cat_name}}</a>						
+									</div>
+									<h1>{{page.product-name}}</h1>
+									<p>{{page.product-desc}}</p>
+									<ul>
+										<li><span>Рекомендованный возраст:</span> {{page.product-year}}</li>
+										<li><span>Размер:</span> {{page.product-size}}</li>
+										<li><span>Срок изготовления:</span> {{page.product-time}}</li>
+									</ul>
+									<ul class="actions align-center">
+										<li><span class="price">{{page.product-price}} &#8381;</span></li>
+										<li><span class="button alt big">Заказать</span></li>
+									</ul>
+								</div>
+							</div>
 						</div>
-						<header class="product">
-							{% assign rating_array = "4.7,4.8,4.9" | split:"," %}
-							{% assign count_array = "12,18,6,8,11,16" | split:"," %}
-							<script type="application/ld+json">
-							{
-							  "@context": "http://schema.org/",
-							  "@type": "Product",
-							  "name": "{{page.product-title}}",
-							  "image": "http://copperi.ru/images{{page.url}}-1.jpg",
-							  "description": "{{page.product-desc}}",
-							  "aggregateRating": {
-								"@type": "AggregateRating",
-								"ratingValue": "{{rating_array | sample}}",
-								"reviewCount": "{{count_array | sample}}"
-							  },
-							  "offers": {
-								"@type": "Offer",
-								"priceCurrency": "RUB",
-								"price": "{{site.data[page.product-type][0].price | remove: ","}}",
-								"priceValidUntil": "2020-11-05",
-								"availability": "http://schema.org/InStock",
-								"seller": {
-								  "@type": "Organization",
-								  "name": "COPPERI"
-								}
-							  }
-							}
-							</script>
-							<h2>{{ page.product-name }}</h2>
-							<div class="var_attr">
-								{% for model in site.data[page.product-type] %}
-								<p class="s{{forloop.index}} hide">{{model.price}}</p>
-								{% endfor %}
-							</div>
-							<button id="btn-order" class="button modal-open" data-modal="modal-order">Заказать</button>
-						</header>							
 					</section>
-					<div class="hero-block container 75%">
-						<div class="4u -4u 6u(medium) -3u(medium) 10u(xsmall) -1u(xsmall)">
-						<h5>Выберите размер</h5>
-						<div class="select-wrapper">
-							<select id="pa_size" name="attribute_pa_size" class="size_select" data-target=".var_attr">
-								{% for model in site.data[page.product-type] %}
-								<option value="{{model.size}}" {% if forloop.index==1 %}selected="selected"{% endif %} data-show=".s{{forloop.index}}">{{model.size}}</option>
-								{% endfor %}
-							</select>
-						</div>
-						</div>
-					</div>
-					
-					<div class="hero-block container 50%">
-						<h1>{{ page.product-title }}</h1>
-						<p>{{ page.product-desc }}</p>
-					</div>
-					
-					<div class="hero-block container 75%">
-						<div class="row">
-							{% assign model_array = page.product-model | split: '-' %}
-							{% assign design-number = model_array | last %}
-							<ul class="attr">
-								<li class="var_attr">Артикул: {% for model in site.data[page.product-type] %}<span class="s{{forloop.index}} hide">{{model.model-no}}-{{design-number}}</span>{% endfor %}</li>
-								<li class="var_attr">Размер: {% for model in site.data[page.product-type] %}<span class="s{{forloop.index}} hide">{{model.size}}</span>{% endfor %}</li>
-								<li class="var_attr">Мощность: {% for model in site.data[page.product-type] %}<span class="s{{forloop.index}} hide">{{model.wattage}} Вт</span>{% endfor %}</li>
-								<li>Подключение: <span>{{ page.product-connection }}</span></li>
-								<li>Цвет: <span>{{ page.product-color }}</span></li>
-							</ul>
-						</div>
-					</div>
-					
-					<div class="hero-block container 50%">
-						<h4>Особенности модели:</h4>
-						<ul class="alt">
-							{% for feature in page.product-features %}
-							<li>{{ feature }}</li>
+					{% if img_array.size > 0 %}
+					<section id="photo" class="product-section">
+						<header>
+							<h2>Фотографии</h2>
+						</header>
+						<div class="row uniform 25%">
+							{% for img in img_array %}
+							{% if forloop.index==1 %}
+								{% continue %}
+							{% endif %}
+							<div class="4u 6u(medium) 12u(small)">
+								<img class="image fit" src="{{img}}" alt='{{page.product-name}}-{{forloop.index}}'/>
+							</div>
 							{% endfor %}
-						</ul>
-						
-					</div>
+						</div>
+					</section>
+					{% endif %}
+					{% if page.product-video %}
+					<section id="video" class="product-section container">
+						<header>
+							<h2>Видео</h2>
+						</header>
+						{{page.product-video}}
+					</section>
+					{% endif %}
 					{% if page.related %}
 					<section id="frontpage-grid">
 						<header>
@@ -140,18 +109,11 @@
 						</div>
 						
 					</section>
-					{% assign url_list = page.url | split: '/' %}
-					{% assign prod_name = url_list | last %}
-					{% assign back_url = page.url | remove: prod_name %}
-					<div class="view-more">
-						<a href="{{back_url}}">Смотреть всю коллекцию</a>						
-					</div>
+					
 					{% endif %}
 					{% include pre-footer.html %}
 				</article>
 			</div>
-		<!-- CTA -->
-		{% include cta.html %}	
 		<!-- Footer -->
 		{% include footer.html %}	
 		<!-- Scripts -->
