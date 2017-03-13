@@ -51,7 +51,7 @@
 									</ul>
 									<ul class="actions align-center">
 										<li><span class="price">{{page.product-price}} &#8381;</span></li>
-										<li><span class="button alt big">Заказать</span></li>
+										<li><span class="button alt big modal-open" data-modal="modal-order">Заказать</span></li>
 									</ul>
 								</div>
 							</div>
@@ -128,7 +128,8 @@
 				<form action="#" class="ajax-form">
 					<h3>Заказ</h3>
 					<input type="text" class="name" name="name" placeholder="Ваше имя*" required>
-					<input type="tel" class="phone" name="phone" placeholder="Номер телефона*" required>
+					<input type="email" class="email" name="email" placeholder="Ваш e-mail*" required>
+					<textarea rows="5" name="message" class="message" placeholder="Ваше сообщение*" required></textarea>
 					<input style="display:none" type="text" class="product" name="product" id="product-order" value="">
 					<ul class="actions">
 						<li><input type="submit" class="submit button fit" value="Отправить"></li>
