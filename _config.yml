@@ -6,9 +6,17 @@ collections:
   catalog:
     output: true
 
+social:
+  name: KiddyTrick
+  links:
+    - https://www.facebook.com/kiddy.trick
+    - http://instagram.com/kiddy.trick/
+    
+logo: /images/logo-color.svg
+
 defaults:
   -
     scope:
       path: ""
     values:
-      image: /images/banner-antiq.jpg
+      image: /images/banner-myagkie-knizhki.jpg
