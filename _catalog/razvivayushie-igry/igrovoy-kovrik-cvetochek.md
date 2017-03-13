@@ -1,6 +1,6 @@
 ---
-title: Медный дизайн-радиатор отопления COPPERI Antiq модель CAN-1518
-description: Купить медный дизайн-радиатор отопления COPPERI Antiq модель CAN-1518 по цене производителя в Москве.
+title: Мягкий игровой развивающий коврик Цветочек - KiddyTrick
+description: Купить развивающую игрушку Игровой коврик Цветочек в магазине KiddyTrick
 
 layout: product
 permalink: /:path

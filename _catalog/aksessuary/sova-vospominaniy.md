@@ -1,6 +1,6 @@
 ---
-title: Медный дизайн-радиатор отопления COPPERI Antiq модель CAN-1518
-description: Купить медный дизайн-радиатор отопления COPPERI Antiq модель CAN-1518 по цене производителя в Москве.
+title: Сова воспоминаний KiddyTrick. Милый аксессуар для детской
+description: Купить игрушку Сова воспоминаний в магазине KiddyTrick. Цены и размеры.
 
 layout: product
 permalink: /:path

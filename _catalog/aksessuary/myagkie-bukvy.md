@@ -1,6 +1,6 @@
 ---
-title: Медный дизайн-радиатор отопления COPPERI Antiq модель CAN-1518
-description: Купить медный дизайн-радиатор отопления COPPERI Antiq модель CAN-1518 по цене производителя в Москве.
+title: Мягкие буквы-подушки из ткани KiddyTrick
+description: Купить мягкие буквы-подушки из ткани ручной работы KiddyTrick. Цены, размеры, срок изготовления.
 
 layout: product
 permalink: /:path

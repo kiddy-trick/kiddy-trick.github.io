@@ -1,12 +1,12 @@
 ---
-title: Коллекция медных дизайн-радиаторов отопления COPPERI Antiq
-description: Цены на медные дизайн-радиаторы из коллекции COPPERI Antiq
+title: Мягкие развивающие книжки из фетра KiddyTrick
+description: Большой выбор мягких развивающих книжек из фетра ручной работы KiddyTrick
 layout: category
 permalink: /:path/
 page-title: Мягкие книжки
 page-subtitle: Соберите свою индивидуальную книжку
 
-banner-image: "/images/banner2.jpg"
+banner-image: "/images/banner-myagkie-knizhki.jpg"
 alt-header: 1
 ---
 
