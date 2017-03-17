@@ -14,7 +14,7 @@ product-video:
 
 product-price: 1200
 
-product-year: "от 1 года"
+product-year: "от 2 лет"
 product-size: "18,5х20 см"
 product-time: "3 раб. дня"
 

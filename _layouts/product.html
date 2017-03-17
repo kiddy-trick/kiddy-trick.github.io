@@ -49,6 +49,9 @@
 										<li><span>Размер:</span> {{page.product-size}}</li>
 										<li><span>Срок изготовления:</span> {{page.product-time}}</li>
 									</ul>
+									{% if page.product-asteriks %}
+									<p>{{ page.product-asteriks }}</p>
+									{% endif %}
 									<ul class="actions align-center">
 										<li><span class="price">{{page.product-price}} &#8381;</span></li>
 										<li><span class="button alt big modal-open" data-modal="modal-order">Заказать</span></li>
