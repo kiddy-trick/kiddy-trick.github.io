@@ -29,5 +29,9 @@ product-size: "102х108 см, лепесток - 34х38 см"
 product-time: "2 недели"
 
 related:
+- palchikoviy-teatr-poezd
+- mini-knizhka-ogorod
+- krestiki-noliki-derevo
+- krestiki-noliki-kosmos
 ---
 	

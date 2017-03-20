@@ -20,5 +20,9 @@ product-size: "21х23х2-10 см"
 product-time: "от 6 раб. дней"
 
 related:
+- myagkaya-stranica-dozhdik
+- myagkaya-stranica-korablik
+- myagkaya-stranica-koty
+- myagkaya-stranica-nebo
 ---
 	

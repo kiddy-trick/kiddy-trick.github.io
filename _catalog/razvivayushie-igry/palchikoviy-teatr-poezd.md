@@ -26,5 +26,9 @@ product-size: "24х28 см"
 product-time: "1 неделя"
 
 related:
+- igrovoy-kovrik-cvetochek
+- mini-knizhka-ogorod
+- krestiki-noliki-derevo
+- krestiki-noliki-kosmos
 ---
 	
