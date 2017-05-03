@@ -13,7 +13,7 @@ product-desc: '<p>Мягкая развивающая книжка в класс
 <p>В комментарии к заказу укажите названия страниц и обложки. Цвет переплета и окантовки также можно выбрать - в наличии голубой, синий, оранжевый и розовый. Если Вы хотите другой цвет, просто напишите какой, и мы обязательно обсудим этот вопрос.</p>
 <p>Стоимость книжки рассчитывается как сумма стоимости страниц и обложки.</p>'
 
-product-video:
+product-video: '<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/Y3mfCtScKH0?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>'
 
 product-asteriks: "* от 1 до 2 лет обязательно присутствие взрослых, так как на страничке присутствуют  мелкие детали, которые очень старательные детки могут проглотить."
 product-price: от 3500
