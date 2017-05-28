@@ -2,6 +2,8 @@ gems:
   - jekyll-seo-tag
   - jekyll-redirect-from
 
+url: https://kiddy-trick.ru
+
 collections:
   catalog:
     output: true
