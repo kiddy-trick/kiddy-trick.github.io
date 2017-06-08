@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /test
-Host: kiddy-trick.ru
+Host: https://kiddy-trick.ru
 Sitemap: https://kiddy-trick.ru/sitemap.xml
