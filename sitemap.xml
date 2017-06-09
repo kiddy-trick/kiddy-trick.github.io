@@ -6,99 +6,219 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://kiddy-trick.ru/</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/razvivayushie-igry/</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/aksessuary/</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/aksessuary/</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/how-to-buy</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/how-to-buy</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/contact</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/contact</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-korablik</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-korablik</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/razvivayushie-igry/igrovoy-kovrik-cvetochek</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/igrovoy-kovrik-cvetochek</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/aksessuary/braslet-iz-fetra</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/aksessuary/braslet-iz-fetra</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-dozhdik</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-dozhdik</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/razvivayushie-igry/palchikoviy-teatr-poezd</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/palchikoviy-teatr-poezd</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/razvivayushie-igry/mini-knizhka-ogorod</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/mini-knizhka-ogorod</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/myagkaya-knizhka-iz-fetra</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/myagkaya-knizhka-iz-fetra</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-koty</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-koty</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-nebo</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-nebo</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-vigvam</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-vigvam</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-skvorechnik</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-skvorechnik</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/oblozhka-knigi-shlyapa-fokusnika</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/myagkaya-stranica-pomogi-zayke</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/oblozhka-knigi-zhiraf-na-oblake</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/oblozhka-knigi-shlyapa-fokusnika</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/myagkie-knizhki/oblozhka-knigi-sonniy-hameleon</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/oblozhka-knigi-zhiraf-na-oblake</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/razvivayushie-igry/krestiki-noliki-derevo</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/myagkie-knizhki/oblozhka-knigi-sonniy-hameleon</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/razvivayushie-igry/krestiki-noliki-kosmos</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/igrovoy-kovrik-malyshkoviy</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/aksessuary/sova-vospominaniy</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/igrushka-krokodil-zastezhka</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://kiddy-trick.ru/aksessuary/myagkie-bukvy</loc>
-  <lastmod>2017-04-08T12:44:23+00:00</lastmod>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/palchikoviy-teatr-bolshoy</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/palchikoviy-teatr-skazki</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/igrushki-zverushki</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/razvivayushie-kartochki-schet-1-5</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/razvivayushie-kartochki-schet-6-10</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/krestiki-noliki-derevo</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/krestiki-noliki-kosmos</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/razvivayushie-igry/iskalka-listochek</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/aksessuary/sova-vospominaniy</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/aksessuary/myagkie-bukvy</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/aksessuary/chehol-dlya-plansheta-panda</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/aksessuary/detskie-ryukzaki-frukty</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kiddy-trick.ru/aksessuary/komforter</loc>
+  <lastmod>2017-06-08T07:25:55+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 </urlset>
