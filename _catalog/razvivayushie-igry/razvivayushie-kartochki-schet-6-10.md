@@ -25,7 +25,7 @@ product-price: 1600
 
 product-year: "от 2 лет"
 product-size: "15х15 см"
-product-time: "3 дня"
+product-time: "3-5 дней"
 
 related:
 - razvivayushie-kartochki-schet-1-5

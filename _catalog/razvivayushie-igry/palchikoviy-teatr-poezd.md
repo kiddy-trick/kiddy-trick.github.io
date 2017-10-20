@@ -19,7 +19,7 @@ product-price: 1500
 
 product-year: "от 0 месяцев*"
 product-size: "Игрушка 6х4 см, вагон - 8х8 см"
-product-time: "3 дня"
+product-time: "3-5 дней"
 
 related:
 - igrovoy-kovrik-cvetochek

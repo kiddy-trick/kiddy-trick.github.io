@@ -24,8 +24,8 @@ product-video: '<div style="position:relative;height:0;padding-bottom:56.25%"><i
 product-price: 600
 
 product-year: "от 2 лет"
-product-size: 
-product-time: "2 дня"
+product-size: "35х8 см"
+product-time: "2-3 дня"
 
 related:
 ---

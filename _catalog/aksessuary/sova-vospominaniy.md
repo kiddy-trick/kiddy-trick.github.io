@@ -16,7 +16,7 @@ product-price: 1000
 
 product-year: "от 0 месяцев"
 product-size: "12х12х5 см"
-product-time: "3 раб.дня"
+product-time: "3-5 дней"
 
 related:
 ---

@@ -15,9 +15,9 @@ product-video:
 
 product-price: 500
 
-product-year: "от 0 месяцев*"
+product-year: "от 0 месяцев"
 product-size: "14х9 см (без учёта ушек)"
-product-time: "1 день"
+product-time: "1-2 дня"
 
 related:
 - igrovoy-kovrik-cvetochek

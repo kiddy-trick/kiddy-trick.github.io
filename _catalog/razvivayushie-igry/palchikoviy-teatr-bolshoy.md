@@ -23,7 +23,7 @@ product-price: 2500
 
 product-year: "от 0 месяцев*"
 product-size: "пальчиковая игрушка 6х4 см, вагон - 8х8 см"
-product-time: "1 неделя"
+product-time: "5-8 дней"
 
 related:
 - igrovoy-kovrik-cvetochek

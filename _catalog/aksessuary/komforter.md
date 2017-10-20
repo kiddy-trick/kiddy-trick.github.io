@@ -16,7 +16,7 @@ product-price: 500
 
 product-year: "от 0 лет"
 product-size: "20х20 см"
-product-time: "1 раб.день"
+product-time: "1-2 дня"
 
 related:
 ---

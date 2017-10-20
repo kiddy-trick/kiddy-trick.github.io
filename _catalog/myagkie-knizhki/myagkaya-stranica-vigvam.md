@@ -12,12 +12,12 @@ product-desc: 'На страничке “Вигвам” малыш сможе�
 
 product-video: '<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/bbZdoUV8hWc?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>'
 
-product-asteriks: "* от 1 до 2 лет обязательно присутствие взрослых, так как на страничке присутствуют  мелкие детали, которые очень старательные детки могут проглотить."
+product-asteriks:
 product-price: 1400
 
-product-year: "от 1 года*"
+product-year: "от 2 лет"
 product-size: "21х23 см"
-product-time: "3 раб.дня"
+product-time: "2-4 дня"
 
 related:
 - myagkaya-stranica-dozhdik

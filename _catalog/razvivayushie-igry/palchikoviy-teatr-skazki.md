@@ -19,7 +19,7 @@ product-price: 1300
 
 product-year: "от 0 месяцев*"
 product-size: "6х4 см"
-product-time: "3 дня"
+product-time: "3-5 дней"
 
 related:
 - igrovoy-kovrik-cvetochek

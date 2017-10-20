@@ -16,7 +16,7 @@ product-price: 500
 
 product-year: "от 3 лет"
 product-size: "15х18 см"
-product-time: "1 день"
+product-time: "1-2 дня"
 
 related:
 ---

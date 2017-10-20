@@ -29,7 +29,7 @@ product-price: 5000
 
 product-year: "от 0 месяцев"
 product-size: "100х100 см"
-product-time: "5 дней"
+product-time: "5-8 дней"
 
 related:
 - palchikoviy-teatr-poezd

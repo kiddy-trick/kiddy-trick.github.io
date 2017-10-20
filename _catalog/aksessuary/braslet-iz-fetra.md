@@ -16,7 +16,7 @@ product-price: 500
 
 product-year: "от 3 лет"
 product-size: "длина 18,5 см, ширина 2 см."
-product-time: "1 раб.день"
+product-time: "1-2 дня"
 
 related:
 ---

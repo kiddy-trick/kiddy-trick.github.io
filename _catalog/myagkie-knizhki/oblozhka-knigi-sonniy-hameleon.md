@@ -12,12 +12,12 @@ product-desc: '<p>Зеленый хамелеон устроился на вет
 
 product-video:
 
-product-asteriks: "* от 1 до 2 лет обязательно присутствие взрослых, так как на страничке присутствуют  мелкие детали, которые очень старательные детки могут проглотить."
+product-asteriks:
 product-price: 500
 
-product-year: "от 1 года*"
+product-year: "от 2 лет"
 product-size: "21х23 см"
-product-time: "3 раб.дня"
+product-time: "2-3 дня"
 
 related:
 - myagkaya-stranica-vigvam

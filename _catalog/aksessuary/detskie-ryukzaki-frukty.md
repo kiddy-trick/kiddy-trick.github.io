@@ -15,7 +15,7 @@ product-price: 800
 
 product-year: "от 2 лет"
 product-size: "27х29 см."
-product-time: "2 раб.дня"
+product-time: "1-2 дня"
 
 related:
 ---

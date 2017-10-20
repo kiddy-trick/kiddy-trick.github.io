@@ -16,7 +16,7 @@ product-price: 1200
 
 product-year: "от 2 лет"
 product-size: "25х25 см"
-product-time: "3 раб. дня"
+product-time: "3-4 дня"
 
 related:
 ---
