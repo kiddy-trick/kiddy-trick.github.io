@@ -1,8 +1,10 @@
-gems:
+plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
 
 url: https://kiddy-trick.ru
+
+title: ""
 
 collections:
   catalog:
