@@ -13,7 +13,7 @@ product-desc: '<p>Большой пальчиковый набор из 66 пе�
 product-asteriks: "* от 0 месяцев до 2 лет не советуем давать эти игрушки в руки ребенку, рекомендуем использовать только в целях привлечения внимания."
 product-video: '<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/jbVzDgZSyok?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>'
 
-product-price: 4500
+product-price: 5000
 
 product-year: "от 3 лет*"
 product-size: "размер персонажей 4-8 см"

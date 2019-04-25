@@ -25,7 +25,7 @@ product-desc: '<p>С мягкой разборной игрушкой в вид�
 product-video: '<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/DY1-7IZvYJo" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>'
 
 
-product-price: 1200
+product-price: 1500
 
 product-year: "от 1 года"
 product-size: "51х30 см"

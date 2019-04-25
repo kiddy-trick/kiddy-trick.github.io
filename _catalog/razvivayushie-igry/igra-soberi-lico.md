@@ -13,7 +13,7 @@ product-desc: 'Веселая игра из фетра, в которой реб
 product-video: '<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/3RelIF4eVSM" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>'
 
 
-product-price: 2000
+product-price: 2800
 
 product-year: "от 4 лет"
 product-size: "65х23 см"
