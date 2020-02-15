@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+	{% include head.html %}
+	<body class="is-loading">
+		<!-- Header -->
+		{% include header.html %}
+		<!-- Nav -->
+		{% include nav.html %}
+		{% include cart.html %}
+		<!-- Main -->
+		
+		<div id="wrapper">
+			<article>
+			{% assign new_products = site.catalog | where: "type", "product" | where: "new", "1" | sort: "weight" %}
+			{% assign featured_products = site.catalog | where: "type", "product" | where: "featured", "1" | sort: "weight" %}
+				<section class="container">
+					<header class="main-header index">
+						<h1>Добро пожаловать!</h1>
+					</header>
+					<p>Магазинчик Kiddy Trick - это небольшая творческая мастерская, которая рада предложить вам и вашим детям мягкие развивающие игрушки из хлопка и фетра.</p>
+					<p>Здесь вы можете найти мягкие книжки, наборы пальчиковых животных, игрушки-застежки и многое другое.</p>
+				</section>
+				<section class="container">
+					<div class="items">
+						<div class="item big">
+							<a href="/razvivayushie-igry/">
+								<img class="image fit" loading="lazy" src="/images/razvivayushie-igry_400w.jpg" alt='Развивающие игры' title='Развивающие игры' srcset="/images/razvivayushie-igry_1600w.jpg 1600w, /images/razvivayushie-igry_1400w.jpg 1400w, /images/razvivayushie-igry_1000w.jpg 1000w, /images/razvivayushie-igry_800w.jpg 800w, /images/razvivayushie-igry_600w.jpg 600w, /images/razvivayushie-igry_400w.jpg 400w" sizes="(max-width: 980px) 100vw, (max-width: 1450px) 80vw, 45vw"/>
+								<div class="caption">
+									<h2>Развивающие игры</h2>
+									<p>Смотреть все</p>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="/stranicy/myagkaya-stranica-more">
+								<img class="image fit" loading="lazy" src="/images/myagkaya-stranica-more_400w.jpg" alt='Страница "Море"' title='Страница "Море"' srcset="/images/myagkaya-stranica-more_1600w.jpg 1600w, /images/myagkaya-stranica-more_1400w.jpg 1400w, /images/myagkaya-stranica-more_1000w.jpg 1000w, /images/myagkaya-stranica-more_800w.jpg 800w, /images/myagkaya-stranica-more_600w.jpg 600w, /images/myagkaya-stranica-more_400w.jpg 400w" sizes="(max-width: 660px) 100vw, (max-width: 980px) 45vw, (max-width: 1080px) 80vw, (max-width: 1450px) 40vw, (max-width: 1820px) 26vw, 16vw"/>
+								<div class="caption">
+									<h2>Страница "Море"</h2>
+									<p>1 500 &#8381;</p>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="/zhivie-kartochki/">
+								<img class="image fit" loading="lazy" src="/images/zhivie-kartochki_400w.jpg" alt='Живые карточки' title='Живые карточки' srcset="/images/zhivie-kartochki_1600w.jpg 1600w, /images/zhivie-kartochki_1400w.jpg 1400w, /images/zhivie-kartochki_1000w.jpg 1000w, /images/zhivie-kartochki_800w.jpg 800w, /images/zhivie-kartochki_600w.jpg 600w, /images/zhivie-kartochki_400w.jpg 400w" sizes="(max-width: 660px) 100vw, (max-width: 980px) 45vw, (max-width: 1080px) 80vw, (max-width: 1450px) 40vw, (max-width: 1820px) 26vw, 16vw"/>
+								<div class="caption">
+									<h2>Живые карточки</h2>
+									<p>Смотреть все</p>
+								</div>
+							</a>
+						</div>
+						<div class="item big">
+							<a href="/myagkie-knizhki/">
+								<img class="image fit" loading="lazy" src="/images/myagkie-knizhki_400w.jpg" alt='Мягкие книжки' title='Мягкие книжки' srcset="/images/myagkie-knizhki_1600w.jpg 1600w, /images/myagkie-knizhki_1400w.jpg 1400w, /images/myagkie-knizhki_1000w.jpg 1000w, /images/myagkie-knizhki_800w.jpg 800w, /images/myagkie-knizhki_600w.jpg 600w, /images/myagkie-knizhki_400w.jpg 400w" sizes="(max-width: 980px) 100vw, (max-width: 1450px) 80vw, 45vw"/>
+								<div class="caption">
+									<h2>Мягкие книжки</h2>
+									<p>Смотреть все</p>
+								</div>
+							</a>
+						</div>
+						<div class="item big">
+							<a href="/stranicy/">
+								<img class="image fit" loading="lazy" src="/images/stranicy_400w.jpg" alt='Страницы для книжек' title='Страницы для книжек' srcset="/images/stranicy_1600w.jpg 1600w, /images/stranicy_1400w.jpg 1400w, /images/stranicy_1000w.jpg 1000w, /images/stranicy_800w.jpg 800w, /images/stranicy_600w.jpg 600w, /images/stranicy_400w.jpg 400w" sizes="(max-width: 980px) 100vw, (max-width: 1450px) 80vw, 45vw"/>
+								<div class="caption">
+									<h2>Страницы для книжек</h2>
+									<p>Смотреть все</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+				<hr class="major"/>
+				{% if new_products[0] %}
+				<section class="container">
+					<header>
+						<h2>Новинки:</h2>
+					</header>
+					<div class="items">
+						{% for product in new_products %}
+						<div class="item">
+							<a href="{{product.url}}">
+								<img class="image fit" loading="lazy" src="/images/catalog{{product.url}}-01_400w.jpg" alt='{{product.product-title}}-фото-1' title='{{product.product-title}}-фото-1' srcset="/images/catalog{{product.url}}-01_1600w.jpg 1600w, /images/catalog{{product.url}}-01_1400w.jpg 1400w, /images/catalog{{product.url}}-01_1000w.jpg 1000w, /images/catalog{{product.url}}-01_800w.jpg 800w, /images/catalog{{product.url}}-01_600w.jpg 600w, /images/catalog{{product.url}}-01_400w.jpg 400w" sizes="(max-width: 660px) 100vw, (max-width: 980px) 45vw, (max-width: 1080px) 80vw, (max-width: 1450px) 40vw, (max-width: 1820px) 26vw, 16vw"/>
+								<div class="caption">
+									<h2>{{product.product-title}}</h2>
+									<p>{{product.product-price}} &#8381;</p>
+								</div>
+							</a>
+						</div>
+						{% endfor %}
+					
+					</div>
+				</section>
+				<hr class="major"/>
+				{% endif %}
+				{% if featured_products[0] %}
+				<section class="container">
+					<header>
+						<h2>Популярные:</h2>
+					</header>
+					<div class="items">
+						{% for product in featured_products %}
+						<div class="item">
+							<a href="{{product.url}}">
+								<img class="image fit" loading="lazy" src="/images/catalog{{product.url}}-01_400w.jpg" alt='{{product.product-title}}-фото-1' title='{{product.product-title}}-фото-1' srcset="/images/catalog{{product.url}}-01_1600w.jpg 1600w, /images/catalog{{product.url}}-01_1400w.jpg 1400w, /images/catalog{{product.url}}-01_1000w.jpg 1000w, /images/catalog{{product.url}}-01_800w.jpg 800w, /images/catalog{{product.url}}-01_600w.jpg 600w, /images/catalog{{product.url}}-01_400w.jpg 400w" sizes="(max-width: 660px) 100vw, (max-width: 980px) 45vw, (max-width: 1080px) 80vw, (max-width: 1450px) 40vw, (max-width: 1820px) 26vw, 16vw"/>
+								<div class="caption">
+									<h2>{{product.product-title}}</h2>
+									<p>{{product.product-price}} &#8381;</p>
+								</div>
+							</a>
+						</div>
+						{% endfor %}
+					</div>
+				</section>
+				<hr class="major"/>
+				{% endif %}
+			</article>
+		</div>
+			
+
+		<!-- Footer -->
+		{% include footer.html %}
+		<!-- Scripts -->
+		{% include scripts.html %}
+
+	</body>
+</html>

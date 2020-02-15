@@ -1,7 +1,10 @@
-(function($) {
+(function() {
 
 	"use strict";
 
+	
+	
+	
 	// Methods/polyfills.
 
 		// addEventsListener
@@ -11,98 +14,112 @@
 			!function(){function t(t){this.el=t;for(var n=t.className.replace(/^\s+|\s+$/g,"").split(/\s+/),i=0;i<n.length;i++)e.call(this,n[i])}function n(t,n,i){Object.defineProperty?Object.defineProperty(t,n,{get:i}):t.__defineGetter__(n,i)}if(!("undefined"==typeof window.Element||"classList"in document.documentElement)){var i=Array.prototype,e=i.push,s=i.splice,o=i.join;t.prototype={add:function(t){this.contains(t)||(e.call(this,t),this.el.className=this.toString())},contains:function(t){return-1!=this.el.className.indexOf(t)},item:function(t){return this[t]||null},remove:function(t){if(this.contains(t)){for(var n=0;n<this.length&&this[n]!=t;n++);s.call(this,n,1),this.el.className=this.toString()}},toString:function(){return o.call(this," ")},toggle:function(t){return this.contains(t)?this.remove(t):this.add(t),this.contains(t)}},window.DOMTokenList=t,n(Element.prototype,"classList",function(){return new t(this)})}}();
 
 	// Vars.
-		var	$window = $(window),
-			$body = document.querySelector('body'),
-			$header = $('#header'),
-			$banner = $('#banner-wrapper');
-
-	// Breakpoints.
-		skel.breakpoints({
-			xlarge:	'(max-width: 1680px)',
-			large:	'(max-width: 1280px)',
-			medium:	'(max-width: 980px)',
-			small:	'(max-width: 736px)',
-			xsmall:	'(max-width: 480px)'
-		});
-		
-	// Viewport	
-		skel.viewport({
-			breakpoints: {
-				small: {
-					scalable: false
-				}
-			}
-		});
-		
-		window.addEventListener('load', function() {
-			$body.classList.remove('is-loading');
-		});
-		
-	//Pop up animation
-		$('.pop').scrollex({
-			  enter: function() {
-				$(this).css('-moz-animation-name', 'pop-up');
-				$(this).css('-webkit-animation-name', 'pop-up');
-				$(this).css('-o-animation-name', 'pop-up');
-				$(this).css('-ms-animation-name', 'pop-up');
-				$(this).css('animation-name', 'pop-up');
-			  }
-			});	
+		var	body = document.querySelector('body');
 			
-	// Nav.
-		var	$nav = document.querySelector('#nav'),
-			$navToggle = document.querySelector('a[href="#nav"]'),
-			$navClose;
+			
 
-		
+	
+	// Disable animations/transitions until everything's loaded.
+		// body.classList.add('is-loading');
+
+		window.addEventListener('DOMContentLoaded', function() {
+			body.classList.remove('is-loading');
+			body.classList.remove('trans');
+		});
+
+	// Nav&Cart.
+		var	nav = document.querySelector('#nav'),
+			navToggle = document.querySelector('a[href="#nav"]'),
+			navClose = document.querySelector('#nav .close'),
+			cart = document.querySelector('#cart'),
+			cartToggle= document.querySelector('a[href="#cart"]'),
+			cartToggle2= document.querySelector('a[href="#cart2"]'),
+			cartClose = document.querySelector('#cart .close');
+			// cartwrapper = document.querySelector('.cart-cart'),
+			// formwrapper = document.querySelector('.form-wrapper');
+			
 		// Hide function
 			var hideNav=function(){
-				$nav.classList.remove('visible');
-				$body.classList.remove('menu-visible');
+				nav.classList.remove('visible');
+				body.classList.remove('menu-visible');
+			};
+
+			var hideCart=function(){
+				cart.classList.remove('visible');
+				body.classList.remove('menu-visible');
+				/* cartwrapper.classList.remove('hide');
+				formwrapper.classList.toggle('hide'); */
 			};
 			
+
 		// Event: Prevent clicks/taps inside the nav from bubbling.
-			addEventsListener($nav, 'click touchend', function(event) {
+			addEventsListener(nav, 'click touchend', function(event) {
+				event.stopPropagation();
+			});
+			addEventsListener(cart, 'click touchend', function(event) {
 				event.stopPropagation();
 			});
 
 		// Event: Hide nav on body click/tap.
-			addEventsListener($body, 'click touchend', function(event) {
-				hideNav();
+			addEventsListener(body, 'click touchend', function(event) {
+				if (body.classList.contains('menu-visible')) {
+					event.preventDefault();
+					event.stopPropagation();
+					hideNav();
+					hideCart();
+				}
+				
 			});
-			
+
 		// Toggle.
 
 			// Event: Toggle nav on click.
-				$navToggle.addEventListener('click', function(event) {
+				navToggle.addEventListener('click', function(event) {
+					if (!body.classList.contains('menu-visible')) {
+						event.preventDefault();
+						event.stopPropagation();
 
-					event.preventDefault();
-					event.stopPropagation();
+						nav.classList.toggle('visible');
+						body.classList.toggle('menu-visible');
+					}
 
-					$nav.classList.toggle('visible');
-					$body.classList.toggle('menu-visible');
+				});
 
+			// Event: Toggle cart on click.
+				cartToggle.addEventListener('click', function(event) {
+					if (!body.classList.contains('menu-visible')) {
+						event.preventDefault();
+						event.stopPropagation();
+
+						cart.classList.toggle('visible');
+						body.classList.toggle('menu-visible');
+					}
+				});
+
+				cartToggle2.addEventListener('click', function(event) {
+					if (!body.classList.contains('menu-visible')) {
+						event.preventDefault();
+						event.stopPropagation();
+
+						cart.classList.toggle('visible');
+						body.classList.toggle('menu-visible');
+					}
 				});
 
 		// Close.
 
-			// Create element.
-				$navClose = document.createElement('a');
-					$navClose.href = '#';
-					$navClose.className = 'close';
-					$navClose.tabIndex = 0;
-					$nav.appendChild($navClose);
-
+			
 			// Event: Hide on ESC.
 				window.addEventListener('keydown', function(event) {
 
-					if (event.keyCode == 27)
+					if (event.keyCode == 27) {
 						hideNav();
-
+						hideCart();
+					}
 				});
 
 			// Event: Hide nav on click.
-				$navClose.addEventListener('click', function(event) {
+				navClose.addEventListener('click', function(event) {
 
 					event.preventDefault();
 					event.stopPropagation();
@@ -110,226 +127,141 @@
 					hideNav();
 
 				});
-				
-		// Close on link click GRN
-		var
-			$this = $('#nav');
-			
-		$this.on('click', 'a', function(event) {
 
+			// Event: Hide cart on click.
+				cartClose.addEventListener('click', function(event) {
+
+					event.preventDefault();
+					event.stopPropagation();
+
+					hideCart();
+
+				});
+		
+	//Close nav on 'a' click and transition body	
+		$('nav').on('click', 'a', function(event) {
 			var $a = $(this),
 				href = $a.attr('href'),
 				target = $a.attr('target');
+			if (href.indexOf('#') != -1 || href.indexOf('tel') != -1 || href.indexOf('wa.me') != -1 || href.indexOf('mailto') != -1 || target == '_blank')
+				return;
+		// Cancel original event.
+			event.preventDefault();
+			event.stopPropagation();
+			
+			hideNav();
+			body.classList.add('trans');
+			window.setTimeout(function() {
+				
+				if (target == '_blank')
+					window.open(href);
+				else
+					window.location.href = href;
+				
+			}, 250);
+		});
 
-			// if (!href || href == '#' || href == '' || href == '#' + id)
-				// return;
 
-			// Cancel original event.
+	//Transition animation
+		$('body').on('click', 'a', function(event) {
+			
+			var $a = $(this),
+				href = $a.attr('href'),
+				target = $a.attr('target');
+			if (href.indexOf('#') != -1 || href.indexOf('tel') != -1 || href.indexOf('wa.me') != -1 || href.indexOf('mailto') != -1 || target == '_blank')
+				return;
+		// Cancel original event.
+			event.preventDefault();
+			event.stopPropagation();
+			
+			body.classList.add('trans');
+			window.setTimeout(function() {
+				
+				if (target == '_blank')
+					window.open(href);
+				else
+					window.location.href = href;
+				
+			}, 250);
+		});
+
+		//Order button - hide cart and show form
+		$(document).ready(function(){
+			var btn = document.getElementsByClassName('order');
+			var thisBtn = btn[0];
+
+			thisBtn.addEventListener("click", function(event){
 				event.preventDefault();
 				event.stopPropagation();
-
-			// Hide panel.
-				hideNav();
-
-			// Redirect to href.
-				window.setTimeout(function() {
-
-					if (target == '_blank')
-						window.open(href);
-					else
-						window.location.href = href;
-
-				}, 500);
-
-		});
-	// Header.
-		$(document).ready(function(){
-			if ($header.hasClass('alt')) {
-				skel.on('+small', function() {
-					$header.removeClass('alt');
-					$banner.unscrollex();
-				});
-				skel.on('-small !small', function() {
-					$header.addClass('alt');
-					if (($banner.length > 0)
-					&&	($header.hasClass('alt'))
-					&&	(!skel.breakpoint('small').active)) {
-
-						$window.on('resize', function() { $window.trigger('scroll'); });
-
-						$banner.scrollex({
-							bottom:		$header.outerHeight() + 1,
-							terminate:	function() { $header.removeClass('alt'); },
-							enter:		function() { $header.addClass('alt reveal'); },
-							leave:		function() { $header.removeClass('alt'); }
-						});
-
-					}
-				});
-			};
-		});
-				
-		if (skel.vars.IEVersion < 9)
-			$header.removeClass('alt');
-		
-	//Poptrox lightbox
-		// $(window).on('load', function(){
-			// var foo = $('#pop-gallery');
-			// foo.poptrox();
-		// });
-		
-		// $(window).on('load', function() {
-				// $('.pop-gallery').poptrox({
-					// baseZIndex: 10001,
-					// useBodyOverflow: false,
-					// usePopupEasyClose: false,
-					// overlayColor: '#1f2328',
-					// overlayOpacity: 0.65,
-					// usePopupDefaultStyling: false,
-					// usePopupCaption: true,
-					// popupLoaderText: '',
-					// usePopupNav: true
-				// });
-			// });
-	
-	// Slick slider	
-		$(document).ready(function(){
-			  $('.slick').slick({
-				dots: true,
-				arrows: true,
-				infinite: true,
-				lazyLoad: 'ondemand',
-				speed: 700
-			  });
-			});
-			
-		$(document).ready(function(){
-			  $('.slick-product').slick({
-				dots: true,
-				arrows: true,
-				infinite: true,
-				lazyLoad: 'ondemand',
-				speed: 700,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				centerMode: true,
-				centerPadding: '23%',
-				responsive: [
-					{
-						breakpoint: 980,
-						settings: {
-							centerMode: false,
-							centerPadding: '0px',
-							slidesToShow: 1
-						}
-					}
-				]
+				if (!this.classList.contains("disabled")) {
+					$('.cart-cart').hide();
+					$('.form-wrapper').fadeIn("500");
+				};
 			});
 		});
-		
-	// Select		
-		$(document).on('change', '.size_select', function() {
-			var target = $(this).data('target');
-			var show = $("option:selected", this).data('show');
-			var get = document.getElementById("pa_size");
-			document.getElementById('product-order').value= get.options[get.selectedIndex].text;
-			$(target).children().addClass('hide');
-			$(show).removeClass('hide');
-		});
+
+		//Return to cart from order
 		$(document).ready(function(){
-			$('.size_select').trigger('change');
-		});
-		
-	//Modal
-		// $(document).ready(function(){
-			// var $btn = document.querySelector('#myBtn'),
-				// $modalClose = document.querySelector('#myClose'),
-				// $modal = document.querySelector('#myModal');
-				
-				// var hideModal=function(){
-					// $modal.classList.remove('show');
-				// };
-				
-				// $btn.addEventListener('click', function(event) {
-
-					// event.preventDefault();
-					// event.stopPropagation();
-
-					// $modal.classList.toggle('show');
-				// });
-				
-				// $modalClose.addEventListener('click', function(event) {
-
-					// event.preventDefault();
-					// event.stopPropagation();
-
-					// $modal.classList.toggle('show');
-				// });
-				
-				// window.onclick = function(event) {
-					// if (event.target == $modal) {
-						// hideModal();
-					// }
-				// };
-		// });
-		
-	//Modal
-		$(document).ready(function(){
-			
-			var btn = document.getElementsByClassName('modal-open');
-			for (var i = 0; i < btn.length; i++) {
-				var thisBtn = btn[i];
+			var btn = document.getElementsByClassName('return-to-cart');
+			var thisBtn;
+			for (thisBtn of btn) {
 				thisBtn.addEventListener("click", function(event){
-					var	modal = document.getElementById(this.getAttribute('data-modal'));
-					modal.classList.toggle('show');
+					event.preventDefault();
+					event.stopPropagation();
+					$('.form-wrapper').hide();
+					$('.cart-cart').fadeIn("500");
 				});
-								
-			};
-			
-			var btnClose = document.getElementsByClassName('modal-close');
-			for (var i = 0; i < btnClose.length; i++) {
-				var thisBtn = btnClose[i];
-				thisBtn.addEventListener("click", function(event){
-					var	modal = document.getElementById(this.getAttribute('data-close'));
-					modal.classList.toggle('show');
-				});
-			};
-			
+			}
 		});
-		
+
+		//Form submission
 		$(document).ready(function(){
-						
-			window.addEventListener('click', function(event) {
-				var modal = document.getElementsByClassName('modal');
-				for (var i = 0; i < modal.length; i++) {
-					var thisModal = modal[i];
-					if (event.target == thisModal) {
-						thisModal.classList.remove('show');
-					}
+			$('.ajax-form').submit(function(event) {
+				event.preventDefault();
+				var form = $(this);
+				$(".ajax-form").hide();
+				$(".form-loading").fadeIn("200");
+				var formdata = form.serialize();
+				var myString = "";
+				var myCart = JSON.parse(localStorage.getItem('shoppingCart'));
+
+				for (var item in myCart) {
+					myString += "&" + $.param(myCart[item]);
 				}
-			});
-			
-		});	
-		
-		
-	//Form submission
-	$(document).ready(function(){
-		$('.ajax-form').submit(function(event) {
-			event.preventDefault();
-			var form = $(this);
-			$.ajax({
-				dataType: "jsonp",
-				url: "https://getsimpleform.com/messages/ajax?form_api_token=d2786e8d1f2ddcb18c8caf84c3225df0",
-				data: form.serialize()
-					}).done(function(data) {
-						$(".ajax-form").hide();
-						$(".form-succes").fadeIn("400");
-						//yaCounter21957292.reachGoal('order');
+				
+				
+				formdata += myString;
+								
+				$.ajax({
+					dataType: "jsonp",
+					url: "https://app.notstupid.name", // url: "https://script.google.com/macros/s/AKfycbzsBxQ_0rkFBSPUoWywnvdjUfyippHomxBDDRHV2hpTmWIrYNc/exec",
+					data: formdata
+						}).done(function(data) {
+							$(".form-loading").hide();
+							$(".form-succes").fadeIn("200");
+							shoppingCart.clearCart();
+							displayCart();
+							/* yaCounter21957292.reachGoal('order');
+							ga('send', 'event', 'form', 'order');
+							fbq('track', 'Lead'); */
 						}).fail(function(data) {
-						$(".ajax-form").hide();
-						$(".form-error").fadeIn("400");
-					});
-		  });
-	});
+							$(".form-loading").hide();
+							$(".form-error").fadeIn("200");
+						});
+			  });
+		});
+	
+	/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+		/* var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+		if (prevScrollpos > currentScrollPos) {
+			document.getElementById("navbar").style.top = "0";
+		} else {
+			document.getElementById("navbar").style.top = "-4em";
+		}
+		prevScrollpos = currentScrollPos;
+		} */
+
 
 })(jQuery);

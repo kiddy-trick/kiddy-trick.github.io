@@ -1,0 +1,59 @@
+<a href="#cart" class="cart icon float">
+		<span class="label">Shopping cart</span>
+	<svg height="2em" viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg">
+        <path style="stroke: none;" fill="none" d="M0 0h24v24H0V0z"/><path style="stroke: none;" d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+        
+	</svg>
+	<sup>(<span class="total-count"></span>)</sup>
+</a>
+<aside id="cart">
+    
+    <a href="#" class="close">
+        <svg height="2em" viewBox="0 0 48 48" class="icon" xmlns="http://www.w3.org/2000/svg">
+            <path style="stroke: none;" d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
+        c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242
+        C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879
+        s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+        </svg>
+    </a>
+    <div class="cart-cart">
+        <h2>Корзина</h2>
+        <div class="cart-inner show-cart">
+        </div>
+        
+        <footer>
+            <hr class="alt" />
+            <h3>Итого: <span class="total-cart"></span> &#8381;</h3>
+            <ul class="actions">
+                <li><a href="#" class="button special big disabled order">Оформить заказ</a></li>
+            </ul>
+        </footer>
+    </div>
+    <div class="form-wrapper" style="display:none;">
+        <form action="#" class="ajax-form">
+            <input type="text" class="name" name="name" placeholder="Ваше имя*" required>
+            <input type="email" class="email" name="email" placeholder="E-mail*" required>
+            <textarea rows="4" name="message" class="message" placeholder="Комментарий"></textarea>
+            <input style="display:none" type="email" name="mail_to" value="info@kiddy-trick.ru">
+            <input style="display:none" class="cart-string" type="text" name="cartstring" value="">
+            <ul class="actions vertical">
+                <li><input type="submit" class="button special big" value="Отправить"></li>
+                <li><a href="#" class="return-to-cart">Вернуться в корзину</a></li>
+            </ul>
+        </form>
+        <div class="form-loading align-center" style="display:none;">
+            <h3>Отправка..</h3>
+            <p>Очень стараемся побыстрее отправить ваш заказ.</p>
+        </div>
+        <div class="form-succes align-center" style="display:none;">
+            <h3>Спасибо!</h3>
+            <p>Мы свяжемся с вами в самое ближайшее время!</p>
+            <a href="#" class="return-to-cart">Вернуться в корзину</a>
+        </div>
+        <div class="form-error align-center" style="display:none;">
+            <h3>Ой!</h3>
+            <p>Что-то пошло не так. Попробуйте отправить заказ чуть позже или напишите нам на почту info@kiddy-trick.ru.</p>
+            <a href="#" class="return-to-cart">Вернуться в корзину</a>
+        </div>
+    </div>
+</aside>

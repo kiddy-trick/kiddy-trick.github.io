@@ -1,152 +1,128 @@
-<!DOCTYPE HTML>
-
-<html>
-	<head>
-		{% include head.html %}
-		{% seo %}
-	</head>
-	<body id="top" class="is-loading">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="ru">
+	{% include head.html %}
+	<body class="is-loading">
 		<!-- Header -->
-		{% include header.html %}	
+		{% include header.html %}
 		<!-- Nav -->
-		{% include nav.html %}		
+		{% include nav.html %}
+		<!-- Cart -->
+		{% include cart.html %}
 		<!-- Main -->
-			<div id="not-main">
-				<article  class="special">
-					<section id="product-hero" class="product-section">
-						<div class="row">
-							{% assign img_array = "" | split:"," %}
-							{% for file in site.static_files %}
-								{% if file.path contains page.url %}
-									{% assign img_array = img_array | push: file.path %}
-								{% endif %}
-							{% endfor %}
-							
-							<div class="7u 12u(medium)">
-								<div class="image fit">
-									<img src="{{img_array[0]}}" alt='{{page.product-name}}'/>
-								</div>
-							</div>
-							<div class="5u 12u(medium)">
-								<div class="hero-block">
-									{% assign url_list = page.url | split: '/' %}
-									{% assign prod_name = url_list | last %}
-									{% assign back_url = page.url | remove: prod_name %}
-									
-									{% for product in site.catalog %}
-										{% if product.url == back_url %}
-											{% assign cat_name = product.page-title %}
-										{% endif %}
-									{% endfor %}
-									<div class="view-more">
-										<a href="{{back_url}}">{{cat_name}}</a>						
-									</div>
-									<h1>{{page.product-name}}</h1>
-									<p>{{page.product-desc}}</p>
-									<ul>
-										<li><span>Рекомендованный возраст:</span> {{page.product-year}}</li>
-										<li><span>Размер:</span> {{page.product-size}}</li>
-										<li><span>Срок изготовления:</span> {{page.product-time}}</li>
-									</ul>
-									{% if page.product-asteriks %}
-									<p>{{ page.product-asteriks }}</p>
-									{% endif %}
-									<ul class="actions align-center">
-										<li><span class="price">{{page.product-price}} &#8381;</span></li>
-										<li><span class="button alt big modal-open" data-modal="modal-order">Заказать</span></li>
-									</ul>
-								</div>
-							</div>
+		
+		{% assign img_array = "" | split:"," %}
+		{% assign url_list = page.url | split: "/" %}
+		{% assign product_name = url_list | last %}
+		{% for file in site.static_files %}
+			{% if file.path contains page.url %}
+				{% unless file.path contains "_" %}
+					{% assign img_array = img_array | push: file.path %}
+				{%endunless%}
+			{% endif %}
+		{% endfor %}
+		<div id="wrapper">
+			<article>
+				<div class="container">
+					
+					<section class="product">
+						<img class="image fit" src="/images/catalog{{page.url}}-01_1600w.jpg" alt='{{page.product-title}}-фото-1' title='{{page.product-title}}-фото-1' srcset="/images/catalog{{page.url}}-01_1600w.jpg 1600w, /images/catalog{{page.url}}-01_1400w.jpg 1400w, /images/catalog{{page.url}}-01_1000w.jpg 1000w, /images/catalog{{page.url}}-01_800w.jpg 800w, /images/catalog{{page.url}}-01_600w.jpg 600w, /images/catalog{{page.url}}-01_400w.jpg 400w" sizes="(max-width: 780px) 100vw, (max-width: 980px) 45vw, 40vw"/>
+						<div>
+							<header class="main-header">
+								{% assign rating_array = "4.7,4.8,4.9" | split:"," %}
+								{% assign count_array = "12,18,6,8,11,16" | split:"," %}
+								<script type="application/ld+json">
+								{
+									"@context": "http://schema.org/",
+									"@type": "Product",
+									"name": '{{page.product-title}}',
+									"image": "https://kiddy-trick.ru/images/catalog{{page.url}}-01_1600w.jpg",
+									"description": '{{page.product-description}}',
+									"aggregateRating": {
+									"@type": "AggregateRating",
+									"ratingValue": "{{rating_array | sample}}",
+									"reviewCount": "{{count_array | sample}}"
+									},
+									"offers": {
+									"@type": "Offer",
+									"priceCurrency": "RUB",
+									"price": "{{page.product-price | remove: " "}}",
+									"priceValidUntil": "2021-11-05",
+									"availability": "http://schema.org/InStock",
+									"seller": {
+										"@type": "Organization",
+										"name": "kiddy-trick"
+									}
+									}
+								}
+								</script>
+								<h1>{{page.product-title}}</h1>
+							</header>
+							<!-- <p>{{page.product-description}}</p> -->
+							{{content}}
+							<ul>
+								<li><b>Рекомендованный возраст:</b> {{page.feature-age}}</li>
+								<li><b>Размер:</b> {{page.feature-size}}</li>
+								<li><b>Срок изготовления:</b> {{page.feature-time}}</li>
+							</ul>
+							<h2>{{page.product-price}} &#8381;</h2>
+							<footer>
+								<ul class="actions">
+									<li>
+										<a href="#" class="button special big add-to-cart" data-name='{{page.product-title}}' data-price="{{page.product-price | remove: ' '}}" data-url="{{page.url}}">В корзину</a>
+									</li>
+								</ul>
+							</footer>
 						</div>
 					</section>
-					{% if img_array.size > 0 %}
-					<section id="photo" class="product-section">
-						<header>
-							<h2>Фотографии</h2>
-						</header>
-						<div class="row uniform 25%">
-							{% for img in img_array %}
-							{% if forloop.index==1 %}
-								{% continue %}
-							{% endif %}
-							<div class="4u 6u(medium) 12u(small)">
-								<img class="image fit" src="{{img}}" alt='{{page.product-name}}-{{forloop.index}}'/>
-							</div>
-							{% endfor %}
-						</div>
+					{% if img_array.size > 1 %}
+					<hr class="major"/>
+					<h2>Фотографии:</h2>
+					<section class="photos">
+						{% for img in img_array %}
+							{% unless img contains "01" %}
+								<img class="image fit" loading="lazy" src="{{img | remove: '.jpg'}}_1600w.jpg" alt='{{page.product-title}}-фото-{{forloop.index}}' title='{{page.product-title}}-фото-{{forloop.index}}' srcset="{{img | remove: '.jpg'}}_1600w.jpg 1600w, {{img | remove: '.jpg'}}_1400w.jpg 1400w, {{img | remove: '.jpg'}}_1000w.jpg 1000w, {{img | remove: '.jpg'}}_800w.jpg 800w, {{img | remove: '.jpg'}}_600w.jpg 600w, {{img | remove: '.jpg'}}_400w.jpg 400w" sizes="(max-width: 780px) 100vw, (max-width: 980px) 45vw, 40vw"/>
+							{% endunless %}
+						{% endfor %}
 					</section>
 					{% endif %}
 					{% if page.product-video %}
-					<section id="video" class="product-section container">
-						<header>
-							<h2>Видео</h2>
-						</header>
-						{{page.product-video}}
-					</section>
+					<hr class="major"/>
+					<h2>Видео:</h2>
+					<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/{{page.product-video}}" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 					{% endif %}
 					{% if page.related %}
-					<section id="frontpage-grid">
-						<header>
-							<h2>Вам также может понравиться</h2>
-						</header>
-						<div class="row 0%">
-							{% for rel-product in page.related %}
-								{% for product in site.catalog %}
-									{% if product.url contains rel-product %}
-										<div class="3u 4u(large) 6u(small)">
-											<a href="{{ product.url }}" class="copperi-link">
-												<div class="inner-wrapper product">	
-													<img class="image fit pop" src="/images/catalog/{{rel-product}}-small.jpg" alt='{{product.product-name}}'>
-													<h3>{{ product.product-name }}</h3>
-													<p>{{ product.product-price }}</p>
-												</div>	
-											</a>
-										</div>
-									{% endif %}
-								{% endfor %}
-							{% endfor %}
-							
-							
+					<hr class="major"/>
+					<h2>Смотрите также:</h2>
+					<section class="items">
+						{% for related_product in page.related %}
+						{% for product in site.catalog %}
+						{% if product.url contains related_product %}
+						<div class="item">
+							<a href="{{product.url}}">
+								<img class="image fit" loading="lazy" src="/images/catalog{{product.url}}-01_400w.jpg" alt='{{product.product-title}}-фото-1' title='{{product.product-title}}-фото-1' srcset="/images/catalog{{product.url}}-01_1600w.jpg 1600w, /images/catalog{{product.url}}-01_1400w.jpg 1400w, /images/catalog{{product.url}}-01_1000w.jpg 1000w, /images/catalog{{product.url}}-01_800w.jpg 800w, /images/catalog{{product.url}}-01_600w.jpg 600w, /images/catalog{{product.url}}-01_400w.jpg 400w" sizes="(max-width: 660px) 100vw, (max-width: 980px) 45vw, (max-width: 1080px) 80vw, (max-width: 1450px) 40vw, (max-width: 1820px) 26vw, 16vw"/>
+								<div class="caption">
+									<h2>{{product.product-title}}</h2>
+									<p>{{product.product-price}} &#8381;</p>
+								</div>
+							</a>
 						</div>
-						
+						{% endif %}
+						{% endfor %}
+						{% endfor %}
 					</section>
-					
 					{% endif %}
-					{% include pre-footer.html %}
-				</article>
-			</div>
+					{% if img_array.size > 1 %}
+					<a id='backtotop' href="#wrapper">Наверх</a>
+					{% endif %}
+				</div>
+			</article>
+		</div>
+			
+
 		<!-- Footer -->
-		{% include footer.html %}	
+		{% include footer.html %}
 		<!-- Scripts -->
-		{% include scripts.html %}	
-		</div>
-		<!-- The Modal -->
-		<div id="modal-order" class="modal">
+		{% include scripts.html %}
 
-			<!-- Modal content -->
-			<div class="modal-content special">
-				<span id="modal-close-order" class="modal-close" data-close="modal-order"></span>
-				<form action="#" class="ajax-form">
-					<h3>Заказ</h3>
-					<input type="text" class="name" name="name" placeholder="Ваше имя*" required>
-					<input type="email" class="email" name="email" placeholder="Ваш e-mail*" required>
-					<textarea rows="5" name="message" class="message" placeholder="Ваше сообщение*" required></textarea>
-					<input style="display:none" type="text" class="product" name="product" id="product-order" value="">
-					<ul class="actions">
-						<li><input type="submit" class="submit button fit" value="Отправить"></li>
-					</ul>
-				</form>
-				<div class="form-succes" style="display:none;">
-					 <h3>Спасибо!</h3>
-					 <p>Мы свяжемся с Вами в самое ближайшее время!</p>
-				</div>
-				<div class="form-error" style="display:none;">
-					 <h3>Ой!</h3>
-					 <p>Что-то пошло не так. Попробуйте отправить заказ чуть позже или просто позвоните нам.</p>
-				</div>
-			</div>
-
-		</div>
 	</body>
 </html>

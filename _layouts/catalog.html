@@ -1,56 +1,47 @@
-<!DOCTYPE HTML>
-
-<html>
-	<head>
-		{% include head.html %}
-		{% seo %}
-	</head>
-	<body id="top" class="is-loading">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="ru">
+	{% include head.html %}
+	<body class="is-loading">
 		<!-- Header -->
-		{% include header.html %}	
+		{% include header.html %}
 		<!-- Nav -->
-		{% include nav.html %}		
-		<!-- Banner -->
-		{% include banner-generic.html %}	
+		{% include nav.html %}
+		{% include cart.html %}
+		{% assign all_products = site.catalog | where: "type", "product" %}
 		<!-- Main -->
-			<div id="not-main">
-				<article  class="special">
-					<section id="frontpage-grid">
-						<div class="row 0%">
-						{% assign sorted_cat = site.catalog | sort: 'weight' %}
-						{% for product in sorted_cat %}
-							{% if product.layout != "category" %}
-								{% if product.url contains page.url %}
-									{% assign url_list = product.url | split: '/' %}
-									{% assign prod_name = url_list | last %}
-									<div class="3u 4u(large) 6u(small)">
-										<a href="{{product.url}}" class="copperi-link">
-											<div class="inner-wrapper product">	
-												<img class="image fit pop" src="/images/catalog/{{prod_name}}-small.jpg" alt="{{product.product-title}}-{{prod_name}}">
-												<h3>{{product.product-name}}</h3>
-												{% assign first-model = site.data[product.product-type] | first %}
-												<p>{{ first-model.price }}</p>
-											</div>	
-										</a>
-									</div>
-								{% endif %}
-							{% endif %}
-						{% endfor %}
+		<div id="wrapper">
+			<article>
+				<div class="container">
+					<header class="main-header">
+						<h1>{{page.page-title}} <sup>({{all_products|size}})</sup></h1>
+					</header>
+					<section class="items">
+					{% for product in all_products %}
+						
+						<div class="item">
+							<a href="{{product.url}}">
+								<img class="image fit" loading="lazy" src="/images/catalog{{product.url}}-01_400w.jpg" alt='{{product.product-title}}-фото-1' title='{{product.product-title}}-фото-1' srcset="/images/catalog{{product.url}}-01_1600w.jpg 1600w, /images/catalog{{product.url}}-01_1400w.jpg 1400w, /images/catalog{{product.url}}-01_1000w.jpg 1000w, /images/catalog{{product.url}}-01_800w.jpg 800w, /images/catalog{{product.url}}-01_600w.jpg 600w, /images/catalog{{product.url}}-01_400w.jpg 400w" sizes="(max-width: 660px) 100vw, (max-width: 980px) 45vw, (max-width: 1080px) 80vw, (max-width: 1450px) 40vw, (max-width: 1820px) 26vw, 16vw"/>
+								<div class="caption">
+									<h2>{{product.product-title}}</h2>
+									<p>{{product.product-price}} &#8381;</p>
+								</div>
+							</a>
 						</div>
+						
+					{% endfor %}
 					</section>
-					<section class="container 75%" style="text-align:justify">
-					{{ content }}
+					<section class="content">
+					{{content}}
 					</section>
-					{% include pre-footer.html %}
-				</article>
-			</div>
-		<!-- CTA -->
-		{% include cta.html %}	
-		<!-- Footer -->
-		{% include footer.html %}	
-		<!-- Scripts -->
-		{% include scripts.html %}	
+				</div>
+			</article>
 		</div>
+			
+
+		<!-- Footer -->
+		{% include footer.html %}
+		<!-- Scripts -->
+		{% include scripts.html %}
+
 	</body>
 </html>

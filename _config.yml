@@ -1,26 +1,26 @@
 plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
-
-url: https://kiddy-trick.ru
-
-title: ""
-
+  
 collections:
   catalog:
     output: true
 
 social:
-  name: KiddyTrick
+  name: Kiddy-Trick
   links:
     - https://www.facebook.com/kiddy.trick
-    - http://instagram.com/kiddy.trick/
-    
-logo: /images/logo-color.svg
+    - https://www.instagram.com/kiddy.trick/
+
+logo: /images/logo.jpg
+url: https://kiddy-trick.ru
+
+title: ""
+lang: "ru_RU"
 
 defaults:
   -
     scope:
       path: ""
     values:
-      image: /images/banner-myagkie-knizhki.jpg
+      image: /images/logo.jpg

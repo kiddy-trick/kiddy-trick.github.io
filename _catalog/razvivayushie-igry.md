@@ -1,12 +1,13 @@
 ---
-title: Развивающие игрушки из фетра KiddyTrick
-description: Большой выбор развивающих игрушек из фетра ручной работы KiddyTrick
+title: Развивающие игрушки - Kiddy Trick
+description: Различные игры для тренировки мелкой моторики, логики и внимания, а также для хорошего настроения.
+
 layout: category
 permalink: /:path/
+
+type: category
+
 page-title: Развивающие игры
-page-subtitle: Тренируйте навыки играя
 
-banner-image: "/images/banner-razvivayushie-igry.jpg"
-alt-header: 1
 ---
-
+Различные игры для тренировки мелкой моторики, логики и внимания, а также для хорошего настроения.
