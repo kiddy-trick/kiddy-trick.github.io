@@ -34,9 +34,10 @@
 								{
 									"@context": "http://schema.org/",
 									"@type": "Product",
-									"name": '{{page.product-title | escape}}',
+									"name": "{{page.product-title | escape}}",
+									"brand": "Kiddy Trick",
 									"image": "https://kiddy-trick.ru/images/catalog{{page.url}}-01_1600w.jpg",
-									"description": '{{page.product-description}}',
+									"description": "{{page.product-description | escape}}",
 									"aggregateRating": {
 									"@type": "AggregateRating",
 									"ratingValue": "{{rating_array | sample}}",
@@ -48,6 +49,7 @@
 									"price": "{{page.product-price | remove: " "}}",
 									"priceValidUntil": "2021-11-05",
 									"availability": "http://schema.org/InStock",
+									"url": "{{page.url}}",
 									"seller": {
 										"@type": "Organization",
 										"name": "kiddy-trick"
