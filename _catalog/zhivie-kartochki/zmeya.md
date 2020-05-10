@@ -11,6 +11,7 @@ weight: 4
 featured: 0
 new: 0
 
+product-id: '1025'
 product-title: 'Змея'
 product-description: ''
 product-price: '320'

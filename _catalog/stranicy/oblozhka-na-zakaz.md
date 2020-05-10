@@ -11,11 +11,12 @@ weight: 14
 featured: 0
 new: 0
 
+product-id: '1013'
 product-title: 'Обложка на заказ'
 product-description: 'Обложка с аппликацией, при желании - именная'
 product-price: '500'
 
-feature-age: 'от 2-х лет'
+feature-age: 'от 2 лет'
 feature-size: '21х23 см'
 feature-time: '1-2 дн'
 

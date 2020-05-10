@@ -11,11 +11,12 @@ weight: 1
 featured: 0
 new: 0
 
+product-id: '1014'
 product-title: 'Мягкая книга "Хамелеон"'
 product-description: 'Мягкая книжка состоит из 4 игровых страниц - [Дождик](/stranicy/myagkaya-stranica-dozhdik), [Небо](/stranicy/myagkaya-stranica-nebo), [Скворечники](/stranicy/razvorot-skvorechniki), [Море](/stranicy/myagkaya-stranica-more) (подробнее о каждой странице можно узнать в разделе [Страницы](/stranicy))'
 product-price: '5 700'
 
-feature-age: 'от 2-х лет'
+feature-age: 'от 2 лет'
 feature-size: '21х23 см'
 feature-time: '14-21 дн'
 

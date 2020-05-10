@@ -11,11 +11,12 @@ weight: 3
 featured: 1
 new: 0
 
+product-id: '1016'
 product-title: 'Мягкая книга "Развороты"'
 product-description: 'Книжка состоит из 4 игровых разворотов: [Скворечники](/stranicy/razvorot-skvorechniki), [Поезд](/stranicy/razvorot-poezd), [Букашки](/stranicy/planshet-bukashki) и [Динозавры](/stranicy/planshet-dinozavry) (подробнее о каждой странице можно узнать в разделе [Страницы](/stranicy/))'
 product-price: '6 500'
 
-feature-age: 'от 2-х лет'
+feature-age: 'от 2 лет'
 feature-size: '21х23 см'
 feature-time: '18-25 дн'
 

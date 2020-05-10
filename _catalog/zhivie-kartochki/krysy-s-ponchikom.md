@@ -11,6 +11,7 @@ weight: 3
 featured: 0
 new: 0
 
+product-id: '1024'
 product-title: 'Крыса с пончиком'
 product-description: ''
 product-price: '320'

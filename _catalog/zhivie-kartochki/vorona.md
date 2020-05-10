@@ -11,6 +11,7 @@ weight: 1
 featured: 0
 new: 0
 
+product-id: '1022'
 product-title: 'Ворона'
 product-description: ''
 product-price: '320'

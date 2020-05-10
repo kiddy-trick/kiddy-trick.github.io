@@ -11,11 +11,12 @@ weight: 17
 featured: 0
 new: 1
 
+product-id: '1050'
 product-title: 'Карточки "Застежки"'
 product-description: 'Набор фетровых страниц для тренировки моторики с помощью различных застежек.'
 product-price: '2 500'
 
-feature-age: 'от 2-х лет'
+feature-age: 'от 2 лет'
 feature-size: '21х21 см'
 feature-time: '7-14 дн'
 

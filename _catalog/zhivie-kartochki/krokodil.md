@@ -11,6 +11,7 @@ weight: 7
 featured: 0
 new: 0
 
+product-id: '1028'
 product-title: 'Крокодил'
 product-description: ''
 product-price: '320'

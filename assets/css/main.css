@@ -102,7 +102,7 @@
 
 	body, input, select, textarea {
 		color: var(--text-color);
-		font-family: 'Literata', sans-serif;
+		font-family: 'Literata', serif;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 1.65em;
@@ -1229,7 +1229,9 @@
 		text-align: right;
 	}
 	
-
+	body.menu-visible #wrapper, body.menu-visible #navbar {
+		pointer-events: none;
+	}
 	
 /* Footer */
 
@@ -1887,5 +1889,35 @@
 	}
 
 	.hide {
-		display: none;
+		display: none !important;
+	}
+
+	.fade-in{
+		animation: 0.5s fadeIn;
+	}
+	  
+	  
+	.fade-out{
+		animation: 0.5s fadeOut;
+	}
+	  
+	@keyframes fadeIn{
+		from{
+			opacity:0;
+		}
+	
+		to{
+			opacity:1;
+		}
+	}
+	  
+	  
+	@keyframes fadeOut{
+		from{
+			opacity:1;
+		}
+		
+		to{
+			opacity:0;
+		}
 	}

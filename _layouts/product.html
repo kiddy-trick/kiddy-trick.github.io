@@ -25,7 +25,7 @@
 				<div class="container">
 					
 					<section class="product">
-						<img class="image fit" src="/images/catalog{{page.url}}-01_1600w.jpg" alt='{{page.product-title}}-фото-1' title='{{page.product-title}}-фото-1' srcset="/images/catalog{{page.url}}-01_1600w.jpg 1600w, /images/catalog{{page.url}}-01_1400w.jpg 1400w, /images/catalog{{page.url}}-01_1000w.jpg 1000w, /images/catalog{{page.url}}-01_800w.jpg 800w, /images/catalog{{page.url}}-01_600w.jpg 600w, /images/catalog{{page.url}}-01_400w.jpg 400w" sizes="(max-width: 780px) 100vw, (max-width: 980px) 45vw, 40vw"/>
+						<img class="image fit" src="/images/catalog{{page.url}}-01_1600w.jpg" alt="{{page.product-title | escape}}-фото-1" title="{{page.product-title | escape}}-фото-1" srcset="/images/catalog{{page.url}}-01_1600w.jpg 1600w, /images/catalog{{page.url}}-01_1400w.jpg 1400w, /images/catalog{{page.url}}-01_1000w.jpg 1000w, /images/catalog{{page.url}}-01_800w.jpg 800w, /images/catalog{{page.url}}-01_600w.jpg 600w, /images/catalog{{page.url}}-01_400w.jpg 400w" sizes="(max-width: 780px) 100vw, (max-width: 980px) 45vw, 40vw"/>
 						<div>
 							<header class="main-header">
 								{% assign rating_array = "4.7,4.8,4.9" | split:"," %}
@@ -34,10 +34,9 @@
 								{
 									"@context": "http://schema.org/",
 									"@type": "Product",
-									"name": "{{page.product-title | escape}}",
-									"brand": "Kiddy Trick",
+									"name": "{{page.product-title | remove: '"'}}",
 									"image": "https://kiddy-trick.ru/images/catalog{{page.url}}-01_1600w.jpg",
-									"description": "{{page.product-description | escape}}",
+									"description": '{{page.product-description}}',
 									"aggregateRating": {
 									"@type": "AggregateRating",
 									"ratingValue": "{{rating_array | sample}}",
@@ -49,7 +48,6 @@
 									"price": "{{page.product-price | remove: " "}}",
 									"priceValidUntil": "2021-11-05",
 									"availability": "http://schema.org/InStock",
-									"url": "{{page.url}}",
 									"seller": {
 										"@type": "Organization",
 										"name": "kiddy-trick"
@@ -57,9 +55,16 @@
 									}
 								}
 								</script>
-								<h1>{{page.product-title}}</h1>
+								<script id="product" type="application/json">
+								{
+									"id": "{{page.product-id}}",
+									"title": "{{- page.product-title | replace: '"', '\"' -}}",
+									"price": {{page.product-price | remove: ' '}},
+									"url": "{{page.url}}"
+								}
+								</script>
+								<h1>{{page.product-title | escape}}</h1>
 							</header>
-							<!-- <p>{{page.product-description}}</p> -->
 							{{content}}
 							<ul>
 								<li><b>Рекомендованный возраст:</b> {{page.feature-age}}</li>
@@ -70,7 +75,7 @@
 							<footer>
 								<ul class="actions">
 									<li>
-										<a href="#" class="button special big add-to-cart" data-name='{{page.product-title}}' data-price="{{page.product-price | remove: ' '}}" data-url="{{page.url}}">В корзину</a>
+										<a href="#" class="button special big add-to-cart" data-name='{{- page.product-title | escape -}}' data-price="{{page.product-price | remove: ' '}}" data-url="{{page.url}}">В корзину</a>
 									</li>
 								</ul>
 							</footer>
@@ -82,7 +87,7 @@
 					<section class="photos">
 						{% for img in img_array %}
 							{% unless img contains "01" %}
-								<img class="image fit" loading="lazy" src="{{img | remove: '.jpg'}}_1600w.jpg" alt='{{page.product-title}}-фото-{{forloop.index}}' title='{{page.product-title}}-фото-{{forloop.index}}' srcset="{{img | remove: '.jpg'}}_1600w.jpg 1600w, {{img | remove: '.jpg'}}_1400w.jpg 1400w, {{img | remove: '.jpg'}}_1000w.jpg 1000w, {{img | remove: '.jpg'}}_800w.jpg 800w, {{img | remove: '.jpg'}}_600w.jpg 600w, {{img | remove: '.jpg'}}_400w.jpg 400w" sizes="(max-width: 780px) 100vw, (max-width: 980px) 45vw, 40vw"/>
+								<img class="image fit" loading="lazy" src="{{img | remove: '.jpg'}}_1600w.jpg" alt='{{page.product-title | escape}}-фото-{{forloop.index}}' title='{{page.product-title | escape}}-фото-{{forloop.index}}' srcset="{{img | remove: '.jpg'}}_1600w.jpg 1600w, {{img | remove: '.jpg'}}_1400w.jpg 1400w, {{img | remove: '.jpg'}}_1000w.jpg 1000w, {{img | remove: '.jpg'}}_800w.jpg 800w, {{img | remove: '.jpg'}}_600w.jpg 600w, {{img | remove: '.jpg'}}_400w.jpg 400w" sizes="(max-width: 780px) 100vw, (max-width: 980px) 45vw, 40vw"/>
 							{% endunless %}
 						{% endfor %}
 					</section>
@@ -101,7 +106,7 @@
 						{% if product.url contains related_product %}
 						<div class="item">
 							<a href="{{product.url}}">
-								<img class="image fit" loading="lazy" src="/images/catalog{{product.url}}-01_400w.jpg" alt='{{product.product-title}}-фото-1' title='{{product.product-title}}-фото-1' srcset="/images/catalog{{product.url}}-01_1600w.jpg 1600w, /images/catalog{{product.url}}-01_1400w.jpg 1400w, /images/catalog{{product.url}}-01_1000w.jpg 1000w, /images/catalog{{product.url}}-01_800w.jpg 800w, /images/catalog{{product.url}}-01_600w.jpg 600w, /images/catalog{{product.url}}-01_400w.jpg 400w" sizes="(max-width: 660px) 100vw, (max-width: 980px) 45vw, (max-width: 1080px) 80vw, (max-width: 1450px) 40vw, (max-width: 1820px) 26vw, 16vw"/>
+								<img class="image fit" loading="lazy" src="/images/catalog{{product.url}}-01_400w.jpg" alt='{{product.product-title | escape}}-фото-1' title='{{product.product-title | escape}}-фото-1' srcset="/images/catalog{{product.url}}-01_1600w.jpg 1600w, /images/catalog{{product.url}}-01_1400w.jpg 1400w, /images/catalog{{product.url}}-01_1000w.jpg 1000w, /images/catalog{{product.url}}-01_800w.jpg 800w, /images/catalog{{product.url}}-01_600w.jpg 600w, /images/catalog{{product.url}}-01_400w.jpg 400w" sizes="(max-width: 660px) 100vw, (max-width: 980px) 45vw, (max-width: 1080px) 80vw, (max-width: 1450px) 40vw, (max-width: 1820px) 26vw, 16vw"/>
 								<div class="caption">
 									<h2>{{product.product-title}}</h2>
 									<p>{{product.product-price}} &#8381;</p>

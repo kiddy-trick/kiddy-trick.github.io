@@ -11,6 +11,7 @@ weight: 2
 featured: 0
 new: 0
 
+product-id: '1023'
 product-title: 'Хамелеон'
 product-description: ''
 product-price: '320'

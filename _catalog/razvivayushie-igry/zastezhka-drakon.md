@@ -9,13 +9,14 @@ type: product
 
 weight: 6
 featured: 0
-new: 1
+new: 0
 
+product-id: '1039'
 product-title: 'Игрушка-застежка "Дракон"'
 product-description: 'С мягкой игрушкой в виде дракона можно потренироваться застегивать пуговицы, кнопки, ремешки и фастексы, а также поиграть с липучкой и шнуровкой.'
 product-price: '1 500'
 
-feature-age: 'от 2-х лет'
+feature-age: 'от 2 лет'
 feature-size: '50х30 см в собранном виде'
 feature-time: '5-7 дн'
 

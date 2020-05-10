@@ -11,6 +11,7 @@ weight: 8
 featured: 0
 new: 0
 
+product-id: '1029'
 product-title: 'Цыпленок'
 product-description: ''
 product-price: '320'

@@ -11,6 +11,7 @@ weight: 12
 featured: 0
 new: 0
 
+product-id: '1033'
 product-title: 'Паучок'
 product-description: ''
 product-price: '320'

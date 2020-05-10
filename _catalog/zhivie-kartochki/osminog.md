@@ -11,6 +11,7 @@ weight: 9
 featured: 0
 new: 0
 
+product-id: '1030'
 product-title: 'Осьминог'
 product-description: ''
 product-price: '320'

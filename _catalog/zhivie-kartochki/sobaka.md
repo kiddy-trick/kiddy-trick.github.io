@@ -11,6 +11,7 @@ weight: 10
 featured: 0
 new: 0
 
+product-id: '1031'
 product-title: 'Собака'
 product-description: ''
 product-price: '320'

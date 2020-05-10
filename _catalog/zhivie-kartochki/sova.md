@@ -11,6 +11,7 @@ weight: 6
 featured: 0
 new: 0
 
+product-id: '1027'
 product-title: 'Сова'
 product-description: ''
 product-price: '320'

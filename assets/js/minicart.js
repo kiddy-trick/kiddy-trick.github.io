@@ -8,13 +8,15 @@ var shoppingCart = (function() {
     // =============================
     cart = [];
     
-    // Constructor
-    function Item(product, price, count, url) {
+  // Constructor
+  class Item {
+    constructor(product, price, count, url) {
       this.product = product;
       this.price = price;
       this.count = count;
       this.url = url;
     }
+  }
     
     // Save cart
     function saveCart() {
@@ -25,6 +27,7 @@ var shoppingCart = (function() {
     function loadCart() {
       cart = JSON.parse(localStorage.getItem('shoppingCart'));
     }
+    
     if (localStorage.getItem("shoppingCart") != null) {
       loadCart();
     }

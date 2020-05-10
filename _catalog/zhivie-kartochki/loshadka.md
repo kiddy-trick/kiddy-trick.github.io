@@ -11,6 +11,7 @@ weight: 5
 featured: 0
 new: 0
 
+product-id: '1026'
 product-title: 'Лошадка'
 product-description: ''
 product-price: '320'

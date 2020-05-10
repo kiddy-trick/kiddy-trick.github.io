@@ -11,11 +11,12 @@ weight: 1
 featured: 0
 new: 0
 
+product-id: '1034'
 product-title: 'Пазл "Акула"'
 product-description: 'Пазл из крутящихся дисков с изображением акулы. Диски несъемные, расположены друг над другом "пирамидкой" и закреплены металлической заклепкой.'
 product-price: '800'
 
-feature-age: 'от 2-х лет'
+feature-age: 'от 2 лет'
 feature-size: '21х21 см'
 feature-time: '3-5 дн'
 

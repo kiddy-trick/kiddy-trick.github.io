@@ -11,6 +11,7 @@ weight: 11
 featured: 0
 new: 0
 
+product-id: '1032'
 product-title: 'Рыбка'
 product-description: ''
 product-price: '320'
