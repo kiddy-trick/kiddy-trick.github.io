@@ -996,7 +996,7 @@
 	.items {
 		display: grid;
 		/* grid: auto-flow / repeat(auto-fill, minmax(320px, 1fr)); */
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 		grid-gap: 20px;
 		grid-auto-flow: dense;
 	}
@@ -1203,7 +1203,7 @@
 /* Wrapper (main) */
 
 	#wrapper {
-		margin: 0 18em;
+		margin: 0 19em;
 		margin-right: 10%;
 		padding-top: 6em;
 		min-height: 100vh;

@@ -148,7 +148,8 @@ var cartApi = (function() {
     const navClose = document.querySelector('#nav .close');
     const cart = document.querySelector('#cart');
 	const cartToggles= document.querySelectorAll('a[href="#cart"]');
-	const cartClose = document.querySelector('#cart .close');
+    const cartClose = document.querySelector('#cart .close');
+    const backToTop = document.querySelector('#backtotop');
 
     window.addEventListener('DOMContentLoaded', function() {
         body.classList.remove('is-loading');
@@ -252,6 +253,15 @@ var cartApi = (function() {
         }
     }, false);
 
+    //Scroll to top
+    if (backToTop) {
+        backToTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            body.scrollIntoView(true, {behavior: "smooth"});
+        }, false);
+    }
+
     // Cart related UI
     ///////
     function numberWithSpaces(x) {
@@ -304,9 +314,20 @@ var cartApi = (function() {
         const cartInnerEl = document.querySelector('.show-cart');
         cartInnerEl.innerHTML = "";
         let temp_cart = document.createDocumentFragment();
-        for (const item of cart){
-            let cart_item = createCartItem(item);
-            temp_cart.appendChild(cart_item);
+        if (cart.length == 0) {
+            let empty_cart = document.createElement('div');
+            let el = document.createElement('h4');
+            el.innerText = 'В корзине пока ничего нет.';
+            empty_cart.appendChild(el);
+            el = document.createElement('p');
+            el.innerText = 'Выберите что-нибудь интересное и нажмите кнопку "В корзину"';
+            empty_cart.appendChild(el);
+            temp_cart.appendChild(empty_cart);
+        } else {
+            for (const item of cart){
+                let cart_item = createCartItem(item);
+                temp_cart.appendChild(cart_item);
+            }
         }
         cartInnerEl.appendChild(temp_cart);
     };
@@ -381,7 +402,11 @@ var cartApi = (function() {
             cartApi.addNewItemToCart(product.id, product.title, product.price, product.url, 1);
             displayCart();
             updateCounts();
-            this.innerHTML = 'Добавлено';
+            var button = this;
+            button.innerHTML = 'Добавлено';
+            window.setTimeout(function() {
+                button.innerHTML = 'В корзину';
+            }, 2500, button);
         }, false);
     }
 
@@ -430,20 +455,29 @@ var cartApi = (function() {
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        const formdata = serializeForm(this);
-        const cartdata = cartApi.cartToQuerry();
-        const endpoint = "https://europe-west2-toy-project-275819.cloudfunctions.net/nocors" + formdata + cartdata;
+        // const formdata = serializeForm(this);
+        // const cartdata = cartApi.cartToQuerry();
+        // const endpoint = "https://europe-west2-toy-project-275819.cloudfunctions.net/nocors" + formdata + cartdata;
+        const url = "https://notstupidapp.ew.r.appspot.com/shopapi/kiddytrick"
 
         const form_loading = this.parentNode.querySelector('.form-loading');
         const form_success = this.parentNode.querySelector('.form-success');
         const form_error = this.parentNode.querySelector('.form-error');
 
+        const payload = {
+            name: this.elements["name"].value,
+            email: this.elements["email"].value,
+            message: this.elements["message"].value,
+            cart_sum: this.elements["cartstring"].value,
+            cart: cartApi.listCart()
+        }
         this.classList.add('hide');
         form_loading.classList.remove('hide');
         form_loading.classList.add('fade-in');
 
         let request = new XMLHttpRequest();
-        request.open('GET', endpoint);
+        // request.open('GET', endpoint);
+        request.open('POST', url);
 
         request.onload = function() {
             if (this.status >= 200 && this.status < 400) {
@@ -469,7 +503,7 @@ var cartApi = (function() {
             form_error.classList.remove('hide');
             form_error.classList.add('fade-in');
         };
-        request.send();
+        request.send(JSON.stringify(payload));
 
     }, false);
 

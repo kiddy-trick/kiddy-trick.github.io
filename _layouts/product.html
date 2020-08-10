@@ -9,7 +9,6 @@
 		<!-- Cart -->
 		{% include cart.html %}
 		<!-- Main -->
-		
 		{% assign img_array = "" | split:"," %}
 		{% assign url_list = page.url | split: "/" %}
 		{% assign product_name = url_list | last %}
@@ -23,7 +22,6 @@
 		<div id="wrapper">
 			<article>
 				<div class="container">
-					
 					<section class="product">
 						<img class="image fit" src="/images/catalog{{page.url}}-01_1600w.jpg" alt="{{page.product-title | escape}}-фото-1" title="{{page.product-title | escape}}-фото-1" srcset="/images/catalog{{page.url}}-01_1600w.jpg 1600w, /images/catalog{{page.url}}-01_1400w.jpg 1400w, /images/catalog{{page.url}}-01_1000w.jpg 1000w, /images/catalog{{page.url}}-01_800w.jpg 800w, /images/catalog{{page.url}}-01_600w.jpg 600w, /images/catalog{{page.url}}-01_400w.jpg 400w" sizes="(max-width: 780px) 100vw, (max-width: 980px) 45vw, 40vw"/>
 						<div>
@@ -119,13 +117,11 @@
 					</section>
 					{% endif %}
 					{% if img_array.size > 1 %}
-					<a id='backtotop' href="#wrapper">Наверх</a>
+					<a id='backtotop' href="#">Наверх</a>
 					{% endif %}
 				</div>
 			</article>
 		</div>
-			
-
 		<!-- Footer -->
 		{% include footer.html %}
 		<!-- Scripts -->

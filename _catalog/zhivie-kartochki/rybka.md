@@ -1,19 +1,19 @@
 ---
 title: 'Карточка из фетра Рыбка'
-description: ''
+description: 'Тактильная карточка с изображением золотой рыбки. Чешуя рыбки выполнена из двусторонних пайеток, одна сторона пайеток - золотая, другая - белая.'
 
 layout: product
 permalink: /:path
 image: /images/catalog/zhivie-kartochki/rybka-01_1600w.jpg
 type: product
 
-weight: 11
+weight: 1
 featured: 0
 new: 0
 
-product-id: '1032'
+product-id: '1022'
 product-title: 'Рыбка'
-product-description: ''
+product-description: 'Тактильная карточка с изображением золотой рыбки. Чешуя рыбки выполнена из двусторонних пайеток, одна сторона пайеток - золотая, другая - белая.'
 product-price: '320'
 
 feature-age: 'от 1 года '
@@ -23,3 +23,4 @@ feature-time: '2-4 дн'
 product-video: 
 
 ---
+Тактильная карточка с изображением золотой рыбки. Чешуя рыбки выполнена из двусторонних пайеток, одна сторона пайеток - золотая, другая - белая. 
