@@ -34,7 +34,7 @@
 									"@type": "Product",
 									"name": "{{page.product-title | remove: '"'}}",
 									"image": "https://kiddy-trick.ru/images/catalog{{page.url}}-01_1600w.jpg",
-									"description": '{{page.product-description}}',
+									"description": "{{page.product-description | remove: '"'}}"",
 									"aggregateRating": {
 									"@type": "AggregateRating",
 									"ratingValue": "{{rating_array | sample}}",
