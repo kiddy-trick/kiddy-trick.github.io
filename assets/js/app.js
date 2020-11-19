@@ -253,6 +253,13 @@ var cartApi = (function() {
         }
     }, false);
 
+    // Remove transition class from body if page loaded from bfcache
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted === true) {
+            body.classList.remove('trans');
+        }
+    }, false);
+
     //Scroll to top
     if (backToTop) {
         backToTop.addEventListener('click', function(e) {
