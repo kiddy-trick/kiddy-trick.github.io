@@ -9,7 +9,7 @@ type: product
 
 weight: 8
 featured: 0
-new: 1
+new: 0
 
 product-id: '1007'
 product-title: 'Планшет "Букашки"'
