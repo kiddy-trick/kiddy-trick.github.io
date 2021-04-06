@@ -7,11 +7,11 @@ permalink: /:path
 image: /images/catalog/razvivayushie-igry/nabor-ovoshi-mini-01_1600w.jpg
 type: product
 
-weight: 14
+weight: #REF!
 featured: 0
 new: 0
 
-product-id: '1047'
+product-id: '1046'
 product-title: 'Набор "Овощи" 17 шт'
 product-description: 'Набор состоит из 17 двусторонних фруктов-овощей из фетра. Одна сторона показывает как выглядят овощи снаружи, вторая - как выглядят внутри.  <br /><br />**Список овощей**: (арбуз,баклажан, банан, виноград, гриб, груша, капуста, картошка, лимон, лук, морковка, огурец, перец, помидор, свекла, тыква, яблоко)'
 product-price: '1 600'

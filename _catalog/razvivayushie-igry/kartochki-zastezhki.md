@@ -7,11 +7,11 @@ permalink: /:path
 image: /images/catalog/razvivayushie-igry/kartochki-zastezhki-01_1600w.jpg
 type: product
 
-weight: 17
+weight: #REF!
 featured: 0
 new: 1
 
-product-id: '1050'
+product-id: '1049'
 product-title: 'Карточки "Застежки"'
 product-description: 'Набор фетровых страниц для тренировки моторики с помощью различных застежек.'
 product-price: '2 500'
