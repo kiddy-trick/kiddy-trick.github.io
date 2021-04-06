@@ -7,7 +7,7 @@ permalink: /:path
 image: /images/catalog/razvivayushie-igry/poschitai-ciplyat-01_1600w.jpg
 type: product
 
-weight: #REF!
+weight: 18
 featured: 0
 new: 1
 

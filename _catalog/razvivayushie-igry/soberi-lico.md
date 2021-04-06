@@ -7,7 +7,7 @@ permalink: /:path
 image: /images/catalog/razvivayushie-igry/soberi-lico-01_1600w.jpg
 type: product
 
-weight: #REF!
+weight: 15
 featured: 0
 new: 0
 

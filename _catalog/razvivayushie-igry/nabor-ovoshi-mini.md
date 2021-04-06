@@ -7,7 +7,7 @@ permalink: /:path
 image: /images/catalog/razvivayushie-igry/nabor-ovoshi-mini-01_1600w.jpg
 type: product
 
-weight: #REF!
+weight: 13
 featured: 0
 new: 0
 
