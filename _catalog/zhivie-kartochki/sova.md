@@ -8,13 +8,13 @@ image: /images/catalog/zhivie-kartochki/sova-01_1600w.jpg
 type: product
 
 weight: 2
-featured: 0
+featured: 1
 new: 0
 
-product-id: '1023'
+product-id: '1010'
 product-title: 'Сова'
 product-description: 'Игровая карточка с изображением голубой совы. Голова совы несъемная, вращается на 360 град и крепится к странице с помощью нержавеющей металической заклепки.'
-product-price: '320'
+product-price: '350'
 
 feature-age: 'от 1 года '
 feature-size: '17х17 см'

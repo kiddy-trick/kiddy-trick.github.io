@@ -11,10 +11,10 @@ weight: 1
 featured: 0
 new: 0
 
-product-id: '1022'
+product-id: '1009'
 product-title: 'Рыбка'
 product-description: 'Тактильная карточка с изображением золотой рыбки. Чешуя рыбки выполнена из двусторонних пайеток, одна сторона пайеток - золотая, другая - белая.'
-product-price: '320'
+product-price: '350'
 
 feature-age: 'от 1 года '
 feature-size: '17х17 см'

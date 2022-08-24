@@ -7,11 +7,11 @@ permalink: /:path
 image: /images/catalog/stranicy/planshet-dinozavry-01_1600w.jpg
 type: product
 
-weight: 7
+weight: 3
 featured: 1
 new: 0
 
-product-id: '1006'
+product-id: '1002'
 product-title: 'Планшет "Динозавры"'
 product-description: 'Планшет с игрой "в прятки" представляет собой разворот из двух страниц. На страничках изображен доисторический пейзаж, где живут дружные динозавры. В игре всего 10 различных динозавров, которые любят поиграть в прятки.'
 product-price: '1 800'
@@ -21,8 +21,6 @@ feature-size: '47х25 см в развернутом виде '
 feature-time: '7-9 дн'
 
 product-video: XJppuWMqBGE
-redirect_from:
-  - /razvivayushie-igry/igra-naydi-dinozavrov
 
 ---
 Планшет с игрой "в прятки" представляет собой разворот из двух страниц. На страничках изображен доисторический пейзаж, где живут дружные динозавры. В игре всего 10 различных динозавров, которые любят поиграть в прятки. 

@@ -7,11 +7,11 @@ permalink: /:path
 image: /images/catalog/stranicy/razvorot-poezd-01_1600w.jpg
 type: product
 
-weight: 9
+weight: 5
 featured: 0
 new: 0
 
-product-id: '1008'
+product-id: '1004'
 product-title: 'Разворот "Поезд"'
 product-description: 'Радужный поезд из фетра - это разборная игрушка. Вагоны соединяются друг с другом различными застежками, такими как: пуговка, фастекс, кнопка, магнит, липучка, шнуровка и ремешок. Рассаживая зверят по вагончикам, можно рассказать ребенку, что едят животные.'
 product-price: '2 000'

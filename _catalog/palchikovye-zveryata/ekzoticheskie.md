@@ -7,11 +7,11 @@ permalink: /:path
 image: /images/catalog/palchikovye-zveryata/ekzoticheskie-01_1600w.jpg
 type: product
 
-weight: 4
+weight: 8
 featured: 0
 new: 0
 
-product-id: '1055'
+product-id: '1028'
 product-title: 'Экзотические животные'
 product-description: '19 пальчиковых экзотических животных. Входит в состав большого набора  ["70 зверят"](/palchikovye-zveryata/bolshoj-nabor).<br /><br />**Список животных**: (бегемот, верблюд, жираф, зебра, змея, кенгуру, коала, крокодил, лев, носорог, обезьяна, панда, паук, слон, страус, тигр, хамелеон, черепаха, ягуар)<br /><br />Игрушки односторонние, выполнены из жесткого корейского фетра (полиэстер) и термотрансферной пленки.'
 product-price: '1 700'

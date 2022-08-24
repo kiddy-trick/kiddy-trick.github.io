@@ -7,11 +7,11 @@ permalink: /:path
 image: /images/catalog/palchikovye-zveryata/polyarnye-01_1600w.jpg
 type: product
 
-weight: 6
+weight: 10
 featured: 0
-new: 0
+new: 1
 
-product-id: '1057'
+product-id: '1030'
 product-title: 'Полярные животные'
 product-description: '12 пальчиковых полярных обитателей. Входит в состав большого набора  ["70 зверят"](/palchikovye-zveryata/bolshoj-nabor).<br /><br />**Список животных**: (белуха, белый медведь, заяц-беляк, касатка, морж, нарвал, овцебык, песец, пингвин, полярная сова, северный олень, тюлень)<br /><br />Игрушки односторонние, выполнены из жесткого корейского фетра (полиэстер) и термотрансферной пленки.'
 product-price: '1 050'

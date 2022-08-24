@@ -11,10 +11,10 @@ weight: 10
 featured: 0
 new: 0
 
-product-id: '1031'
+product-id: '1018'
 product-title: 'Летучая мышка'
 product-description: 'Игровая карточка с изображением летучей мышки. Мышка умеет хлопать крыльями.'
-product-price: '320'
+product-price: '350'
 
 feature-age: 'от 1 года '
 feature-size: '17х17 см'

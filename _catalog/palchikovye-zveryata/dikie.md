@@ -7,11 +7,11 @@ permalink: /:path
 image: /images/catalog/palchikovye-zveryata/dikie-01_1600w.jpg
 type: product
 
-weight: 2
+weight: 6
 featured: 0
 new: 0
 
-product-id: '1053'
+product-id: '1026'
 product-title: 'Дикие животные'
 product-description: '13 пальчиковых лесных зверушек. Входит в состав большого набора  ["70 зверят"](/palchikovye-zveryata/bolshoj-nabor).<br /><br />**Список животных**: (белка, волк, ежик, енот, заяц, кабан, лиса, лось, лягушка, медведь, мышка, олень, сова)<br /><br />Игрушки односторонние, выполнены из жесткого корейского фетра (полиэстер) и термотрансферной пленки.'
 product-price: '1 100'

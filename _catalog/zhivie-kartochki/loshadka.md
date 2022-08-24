@@ -11,10 +11,10 @@ weight: 9
 featured: 0
 new: 0
 
-product-id: '1030'
+product-id: '1017'
 product-title: 'Лошадка'
 product-description: 'Игровая карточка с лошадкой. Грива выполнена из прошитых полос фетра, так что лошадку можно причесать или заплести ей косы.'
-product-price: '320'
+product-price: '350'
 
 feature-age: 'от 1 года '
 feature-size: '17х17 см'

@@ -11,10 +11,10 @@ weight: 8
 featured: 0
 new: 0
 
-product-id: '1029'
+product-id: '1016'
 product-title: 'Ворона'
 product-description: 'Игровая картчока с изображением вороны, которая умеет прятать и расправлять крылышки. Крылья вращаются на металлических заклепках. Сложить крылья можно вручную или потянув за шнурочки.'
-product-price: '320'
+product-price: '350'
 
 feature-age: 'от 1 года '
 feature-size: '17х17 см'

@@ -11,10 +11,10 @@ weight: 3
 featured: 0
 new: 0
 
-product-id: '1024'
+product-id: '1011'
 product-title: 'Котенок'
 product-description: 'Игровая карточка с изображением котенка, который умеет шевелить ушками. Ушки несъемные, вращаются на нержавеющих металлических заклепках.'
-product-price: '320'
+product-price: '350'
 
 feature-age: 'от 1 года '
 feature-size: '17х17 см'

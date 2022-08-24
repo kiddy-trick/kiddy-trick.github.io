@@ -7,11 +7,11 @@ permalink: /:path
 image: /images/catalog/palchikovye-zveryata/bolshoj-nabor-01_1600w.jpg
 type: product
 
-weight: 1
+weight: 5
 featured: 0
 new: 1
 
-product-id: '1052'
+product-id: '1025'
 product-title: 'Большой набор "70 зверят"'
 product-description: 'Комплект из 70 мягких зверушек из фетра. Включает в себя 5 категорий животных: [Дикие животные](/palchikovye-zveryata/dikie), [Домашние животные](/palchikovye-zveryata/domashnie), [Экзотические животные](/palchikovye-zveryata/ekzoticheskie), [Морские обитатели](/palchikovye-zveryata/morskie), [Полярные животные](/palchikovye-zveryata/polyarnye). Каждый набор можно заказать отдельно.<br />Игрушки односторонние, выполнены из жесткого корейского фетра (полиэстер) и термотрансферной пленки.<br />В комплект входит специальная сумочка для хранения.'
 product-price: '6 000'

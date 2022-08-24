@@ -7,11 +7,11 @@ permalink: /:path
 image: /images/catalog/razvivayushie-igry/palchikoviy-teatr-poezd-01_1600w.jpg
 type: product
 
-weight: 11
+weight: 3
 featured: 0
 new: 0
 
-product-id: '1044'
+product-id: '1023'
 product-title: 'Пальчиковый театр "Поезд"'
 product-description: 'Радужный поезд из фетра - это разборная игрушка. Вагоны соединяются друг с другом различными застежками, такими как: пуговка, фастекс, кнопка, магнит, липучка, шнуровка и ремешок. Рассаживая зверят по вагончикам, можно рассказать ребенку, что едят животные.'
 product-price: '1 800'

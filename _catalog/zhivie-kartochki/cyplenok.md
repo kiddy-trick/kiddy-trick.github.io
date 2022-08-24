@@ -11,10 +11,10 @@ weight: 5
 featured: 0
 new: 0
 
-product-id: '1026'
+product-id: '1013'
 product-title: 'Цыпленок'
 product-description: 'Игровая карточка с открывающимся яйцом. В яйце прячется цыпленок на шнурочке. На страничке нет съемных деталей'
-product-price: '320'
+product-price: '350'
 
 feature-age: 'от 1 года '
 feature-size: '17х17 см'

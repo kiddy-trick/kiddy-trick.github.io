@@ -11,10 +11,10 @@ weight: 7
 featured: 0
 new: 0
 
-product-id: '1028'
+product-id: '1015'
 product-title: 'Черепашка'
 product-description: 'Игровая карточка с изображением черепашки. С помощю этой карточки малыш узнает, что черепашки умеют прятать голову в панцырь.'
-product-price: '320'
+product-price: '350'
 
 feature-age: 'от 1 года '
 feature-size: '17х17 см'

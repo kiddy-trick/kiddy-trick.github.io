@@ -7,11 +7,11 @@ permalink: /:path
 image: /images/catalog/palchikovye-zveryata/domashnie-01_1600w.jpg
 type: product
 
-weight: 3
+weight: 7
 featured: 0
 new: 0
 
-product-id: '1054'
+product-id: '1027'
 product-title: 'Домашние животные'
 product-description: '15 пальчиковых игрушек. Входит в состав большого набора  ["70 зверят"](/palchikovye-zveryata/bolshoj-nabor).<br /><br />**Список животных**: (барашек, бык, гусь, козленок, корова, кот, курица, лошадка, овечка, ослик, петух, поросенок, собака, утка, цыпленок)<br /><br />Игрушки односторонние, выполнены из жесткого корейского фетра (полиэстер) и термотрансферной пленки.'
 product-price: '1 250'
