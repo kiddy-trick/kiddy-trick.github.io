@@ -12,7 +12,7 @@ social:
     - https://www.facebook.com/kiddy.trick
     - https://www.instagram.com/kiddy.trick/
 
-logo: /images/logo.jpg
+logo: /images/logo_for_links.jpg
 url: https://kiddy-trick.ru
 
 title: ""
@@ -23,4 +23,4 @@ defaults:
     scope:
       path: ""
     values:
-      image: /images/logo.jpg
+      image: /images/logo_for_links.jpg
