@@ -28,7 +28,7 @@
 						{% assign product_name = url_list | last %}
 						<div class="item">
 							<a href="{{product.url}}">
-								<img class="image fit" loading="lazy" src="/images/catalog{{product.url}}-01_400w.jpg" alt='{{product.product-title}}-фото-1' title='{{product.product-title}}-фото-1' srcset="/images/catalog{{product.url}}-01_1600w.jpg 1600w, /images/catalog{{product.url}}-01_1400w.jpg 1400w, /images/catalog{{product.url}}-01_1000w.jpg 1000w, /images/catalog{{product.url}}-01_800w.jpg 800w, /images/catalog{{product.url}}-01_600w.jpg 600w, /images/catalog{{product.url}}-01_400w.jpg 400w" sizes="(max-width: 660px) 100vw, (max-width: 980px) 45vw, (max-width: 1080px) 80vw, (max-width: 1450px) 40vw, (max-width: 1820px) 26vw, 16vw"/>
+								<img class="image fit" {%-if forloop.index > 2-%}loading="lazy"{%-endif-%} src="/images/catalog{{product.url}}-01_400w.jpg" alt='{{product.product-title}}-фото-1' title='{{product.product-title}}-фото-1' srcset="/images/catalog{{product.url}}-01_1600w.jpg 1600w, /images/catalog{{product.url}}-01_1400w.jpg 1400w, /images/catalog{{product.url}}-01_1000w.jpg 1000w, /images/catalog{{product.url}}-01_800w.jpg 800w, /images/catalog{{product.url}}-01_600w.jpg 600w, /images/catalog{{product.url}}-01_400w.jpg 400w" sizes="(max-width: 660px) 100vw, (max-width: 980px) 45vw, (max-width: 1080px) 80vw, (max-width: 1450px) 40vw, (max-width: 1820px) 26vw, 16vw"/>
 								<div class="caption">
 									<h2>{{product.product-title}}</h2>
 									<p>{{product.product-price}} &#8381;</p>
